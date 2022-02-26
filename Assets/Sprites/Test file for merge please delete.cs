@@ -8,6 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         // Test file please delete for branch 2
+        public int = 5;
     }
 
     // Update is called once per frame
