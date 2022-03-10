@@ -40,6 +40,7 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Death:
+                // Store high score with PlayerPref
                 break;
 
             case State.GameOver:
