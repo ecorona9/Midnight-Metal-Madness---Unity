@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private float xraw;
     private bool is_facing_right;
 
+    // Shooting
+    private float shoot_cooldown;
+
     private void Awake()
     {
         player_rigidbody = GetComponent<Rigidbody2D>();
@@ -61,8 +64,9 @@ public class PlayerController : MonoBehaviour
             }
 
             // Shooting Projectiles Input
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown)
             {
+                shoot_cooldown = Time.time + player_stats.fire_rate;
                 Shoot();
             }
         }
@@ -90,8 +94,7 @@ public class PlayerController : MonoBehaviour
     // Shoots a bullet object from the muzzle point
     private void Shoot()
     {
-        GameObject bullet_obj = Instantiate(player_stats.projectile);
-        bullet_obj.transform.position = new Vector3(muzzle_point.position.x, muzzle_point.position.y);
+        GameObject bullet_obj = Instantiate(player_stats.projectile, muzzle_point.position, muzzle_point.rotation);
         bullet_obj.GetComponent<Projectiles>().Fire(is_facing_right);
     }
 

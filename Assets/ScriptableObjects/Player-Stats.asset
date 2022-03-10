@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal_speed: 500
   jump_force: 25
+  fire_rate: 0.25
   projectile: {fileID: 3624629500245990377, guid: 4a9bda4e6d65b63408f9909ccb2fb516, type: 3}
   projectile_speed: 30
