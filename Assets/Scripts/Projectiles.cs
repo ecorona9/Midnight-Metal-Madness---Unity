@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private PlayerStats player_stats;
 
     private Rigidbody2D projectile_rigidbody;
 
@@ -16,11 +16,11 @@ public class Projectiles : MonoBehaviour
     {
         if (is_facing_right)
         {
-            projectile_rigidbody.velocity = new Vector2(speed, 0f);
+            projectile_rigidbody.velocity = new Vector2(player_stats.projectile_speed, 0f);
         } 
         else
         {
-            projectile_rigidbody.velocity = new Vector2(-1 * speed, 0f);
+            projectile_rigidbody.velocity = new Vector2(-1 * player_stats.projectile_speed, 0f);
         }
     }
 
