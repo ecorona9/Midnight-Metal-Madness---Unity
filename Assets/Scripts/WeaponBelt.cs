@@ -6,6 +6,7 @@ public class WeaponBelt : MonoBehaviour
 {
     private PlayerController player_controller;
     private SpriteRenderer proj_weapon_sprite;
+    private Animator proj_weapon_animator;
 
     [Header("Transform of Projectile Weapon")]
     [SerializeField] private Transform proj_weapon;
@@ -25,6 +26,7 @@ public class WeaponBelt : MonoBehaviour
     {
         player_controller = GetComponent<PlayerController>();
         proj_weapon_sprite = proj_weapon.GetComponent<SpriteRenderer>();
+        proj_weapon_animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -68,6 +70,7 @@ public class WeaponBelt : MonoBehaviour
         muzzle.localPosition = obj.muzzle_position;
         proj_weapon.localPosition = obj.weapon_position;
         proj_weapon_sprite.sprite = obj.weapon_sprite;
+        // TODO: Swap Animation Controllers
     }
 
     // Returns true if the care package weapon picked up is the same as our current weapon
