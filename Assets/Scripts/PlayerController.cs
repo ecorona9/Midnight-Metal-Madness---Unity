@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D player_rigidbody;
-    private Vector2 motion_vector;
     private Animator player_animator;
 
     [Header("Player Stats")]
@@ -14,15 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground_mask;
     private bool is_grounded;
 
-    [Header("Projectile Weapon")]
-    [SerializeField] private Transform muzzle_point;
 
     // Movement
+    private Vector2 motion_vector;
     private float xraw;
     private bool is_facing_right;
 
-    // Shooting
-    private float shoot_cooldown;
 
     private void Awake()
     {
@@ -44,30 +40,21 @@ public class PlayerController : MonoBehaviour
             motion_vector = new Vector2(xraw, 0f);
 
             // Flip model
-            Vector3 scale = transform.localScale;
-            if (xraw < 0)
+
+            if (xraw < 0 && is_facing_right)
             {
-                scale.x = -1;
-                is_facing_right = false;
+                FlipCharacter();
             }
-            if (xraw > 0)
+            if (xraw > 0 && !is_facing_right)
             {
-                scale.x = 1;
-                is_facing_right = true;
+                FlipCharacter();
             }
-            transform.localScale = scale;
+
 
             // Jump Input
             if (Input.GetKeyDown(KeyCode.Space) && is_grounded)
             {
                 Jump();
-            }
-
-            // Shooting Projectiles Input
-            if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown)
-            {
-                shoot_cooldown = Time.time + player_stats.fire_rate;
-                Shoot();
             }
         }
     }
@@ -84,6 +71,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FlipCharacter()
+    {
+        Vector3 current_scale = transform.localScale;
+        current_scale.x *= -1;
+        transform.localScale = current_scale;
+        is_facing_right = !is_facing_right;
+    }
+
     // Apply an instaneous force upward on the player
     private void Jump()
     {
@@ -91,11 +86,9 @@ public class PlayerController : MonoBehaviour
         player_rigidbody.AddForce(Vector2.up * player_stats.jump_force, ForceMode2D.Impulse);
     }
 
-    // Shoots a bullet object from the muzzle point
-    private void Shoot()
+    public bool IsFacingRight()
     {
-        GameObject bullet_obj = Instantiate(player_stats.projectile, muzzle_point.position, muzzle_point.rotation);
-        bullet_obj.GetComponent<Projectiles>().Fire(is_facing_right);
+        return is_facing_right;
     }
 
 }

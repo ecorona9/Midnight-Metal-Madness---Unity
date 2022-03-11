@@ -9,10 +9,4 @@ public class PlayerStats : ScriptableObject
     [Header("Player Variables")]
     public float horizontal_speed;
     public float jump_force;
-
-    [Header("Projectile Weapon Variables")]
-    public float fire_rate;
-    public GameObject projectile;
-    public float projectile_speed;
-
 }
