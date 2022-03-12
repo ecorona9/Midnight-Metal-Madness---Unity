@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D player_rigidbody;
     private Vector2 motion_vector;
+    private Animator player_animator;
 
     [Header("Movement")]
     [SerializeField] private float horizontal_speed;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         player_rigidbody = GetComponent<Rigidbody2D>();
+        player_animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
     // Apply an instaneous force upward on the player
     private void Jump()
     {
+        //player_animator.SetTrigger("Jump");
         player_rigidbody.AddForce(Vector2.up * jump_force, ForceMode2D.Impulse);
     }
 
@@ -82,7 +85,7 @@ public class PlayerController : MonoBehaviour
     private void Shoot()
     {
         GameObject bullet_obj = Instantiate(bullet);
-        bullet_obj.transform.position = new Vector3(muzzle_point.position.x, transform.position.y);
+        bullet_obj.transform.position = new Vector3(muzzle_point.position.x, muzzle_point.position.y);
         bullet_obj.GetComponent<Projectiles>().Fire(is_facing_right);
     }
 
