@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour
 {
-    [SerializeField] private float speed;
-
     private Rigidbody2D projectile_rigidbody;
 
     private void Awake()
     {
         projectile_rigidbody = GetComponent<Rigidbody2D>();
     }
-    
-    // Fire the bullet towards the right or left given the direction
-    public void Fire(bool is_facing_right)
+
+    // Fire the bullet towards the right or left given the direction and speed
+    public void Fire(bool is_facing_right, float speed)
     {
         if (is_facing_right)
         {
