@@ -5263,9 +5263,9 @@ MonoBehaviour:
   ground_mask:
     serializedVersion: 2
     m_Bits: 128
-  slope_check_distance: 0.88
   no_friction: {fileID: 6200000, guid: 88575932631115d408caa9e4fc2d3f64, type: 2}
   full_friction: {fileID: 6200000, guid: b89374414d3b5e54ab3d5e8b00a960f6, type: 2}
+  slope_check_distance: 0.88
   ground_check_radius: 0.14
   max_slope_angle: 46
 --- !u!114 &2010100940
