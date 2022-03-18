@@ -86,6 +86,7 @@ public class WeaponBelt : MonoBehaviour
     private void Shoot()
     {
         GameObject bullet_obj = Instantiate(current_weapon.projectile, muzzle.position, Quaternion.identity);
+        bullet_obj.GetComponent<Projectiles>().damage = current_weapon.damage;
         bullet_obj.GetComponent<Projectiles>().Fire(player_controller.IsFacingRight(), current_weapon.proj_speed);
 
         if (current_weapon == default_weapon)

@@ -22,6 +22,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
+        EventManager.instance.OnPlayerDeath += EndGame;
         current_state = State.Start;
         ActivateState();
     }
@@ -45,13 +46,19 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Death:
-                // Store high score with PlayerPref
-                break;
-
+                {
+                    // TODO: some death animation
+                    Debug.Log("You have Died");
+                    TransitionState(State.Lost);
+                    break;
+                }
             case State.Lost:
-                //game_over_ui.SetActive(true);
-                break;
-
+                {
+                    //game_over_ui.SetActive(true);
+                    Time.timeScale = 0f;
+                    Debug.Log("Show game over ui.");
+                    break;
+                }
             case State.Victory:
                 //victory_ui.SetActive(true);
                 break;
@@ -129,7 +136,6 @@ public class GameStateManager : MonoBehaviour
 
             case State.Lost:
                 break;
-
             case State.Victory:
                 break;
 
@@ -145,5 +151,15 @@ public class GameStateManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void EndGame()
+    {
+        TransitionState(State.Death);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.instance.OnPlayerDeath -= EndGame;
     }
 }

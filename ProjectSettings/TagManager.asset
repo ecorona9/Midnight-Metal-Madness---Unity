@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Care Package
   - Currency
+  - Projectiles
   layers:
   - Default
   - TransparentFX
