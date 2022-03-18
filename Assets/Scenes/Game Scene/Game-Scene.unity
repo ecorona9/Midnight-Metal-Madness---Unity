@@ -5025,7 +5025,7 @@ MonoBehaviour:
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1473
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -5068,6 +5068,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a9552280a3d20439ba1e2440e7cbbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause_ui: {fileID: 0}
+  game_over_ui: {fileID: 0}
+  victory_ui: {fileID: 0}
 --- !u!114 &1677746175
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Time.timeScale != 0f)
+        if (Time.timeScale != 0f && !GameStateManager.instance.IsGameOver())
         {
             // Horizontal Input
             xraw = Input.GetAxisRaw("Horizontal");
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Time.timeScale != 0f)
+        if (Time.timeScale != 0f && !GameStateManager.instance.IsGameOver())
         {
             // Ground Check
             is_grounded = Physics2D.OverlapCircle(ground_check_point.position, ground_check_radius, ground_mask);    

@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    private enum State { Start, Running, Paused, Death, GameOver, Victory }
+    [SerializeField] private GameObject pause_ui;
+    [SerializeField] private GameObject game_over_ui;
+    [SerializeField] private GameObject victory_ui;
+
+    private enum State { Start, Running, Paused, Death, Lost, Victory }
 
     public static GameStateManager instance { get; private set; }
 
@@ -36,6 +40,7 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
+                //pause_ui.SetActive(true);
                 Time.timeScale = 0f;
                 break;
 
@@ -43,10 +48,12 @@ public class GameStateManager : MonoBehaviour
                 // Store high score with PlayerPref
                 break;
 
-            case State.GameOver:
+            case State.Lost:
+                //game_over_ui.SetActive(true);
                 break;
 
             case State.Victory:
+                //victory_ui.SetActive(true);
                 break;
 
             default:
@@ -65,16 +72,19 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
+                //pause_ui.SetActive(false);
                 Time.timeScale = 1f;
                 break;
 
             case State.Death:
                 break;
 
-            case State.GameOver:
+            case State.Lost:
+                //game_over_ui.SetActive(false);
                 break;
 
             case State.Victory:
+                //victory_ui.SetActive(false);
                 break;
 
             default:
@@ -117,7 +127,7 @@ public class GameStateManager : MonoBehaviour
             case State.Death:
                 break;
 
-            case State.GameOver:
+            case State.Lost:
                 break;
 
             case State.Victory:
@@ -126,5 +136,14 @@ public class GameStateManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public bool IsGameOver()
+    {
+        if (current_state == State.Lost || current_state == State.Victory)
+        {
+            return true;
+        }
+        return false;
     }
 }
