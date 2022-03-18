@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private PlayerStats player_stats;
 
+    [SerializeField] private GameObject damage_text;
+
     private int health;
     
     private void Awake()
@@ -42,6 +44,11 @@ public class PlayerHealth : MonoBehaviour
     {
         EventManager.instance.DecreasePlayerHealthInUI(dmg);
         health -= dmg;
+        Vector3 offset = new Vector3(0f, 2f, 0f);
+        GameObject text_popup = Instantiate(damage_text, transform.position + offset, transform.rotation);
+        string text = "-" + dmg.ToString();
+        text_popup.GetComponent<FloatingTextDisplay>().SetText(text, Color.red);
+
         if (health <= 0f)
         {
             EventManager.instance.LoseGame();
