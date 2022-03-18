@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    [SerializeField] private GameObject pause_ui;
-    [SerializeField] private GameObject game_over_ui;
-    [SerializeField] private GameObject victory_ui;
+    [SerializeField] private PauseInterface pause_ui;
+    [SerializeField] private Animator game_over_ui;
+    [SerializeField] private Animator victory_ui;
 
     private enum State { Start, Running, Paused, Death, Lost, Victory }
 
@@ -40,7 +40,7 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
-                //pause_ui.SetActive(true);
+                pause_ui.ShowPauseMenu();
                 Time.timeScale = 0f;
                 break;
 
@@ -72,7 +72,7 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
-                //pause_ui.SetActive(false);
+                pause_ui.HidePauseMenu();
                 Time.timeScale = 1f;
                 break;
 
