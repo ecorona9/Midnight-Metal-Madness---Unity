@@ -6239,6 +6239,7 @@ GameObject:
   - component: {fileID: 1677746175}
   - component: {fileID: 1677746174}
   - component: {fileID: 1677746177}
+  - component: {fileID: 1677746178}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -6299,6 +6300,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f01001d809db3241aff61e4305c5f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1677746178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677746173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbb95effa6023845bbf83e1362d5996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool_list:
+  - projectile: {fileID: 3624629500245990377, guid: 4a9bda4e6d65b63408f9909ccb2fb516, type: 3}
+    amount: 5
+    projectile_list: []
+  - projectile: {fileID: 3624629500245990377, guid: fdba0a244ab88194aadf0097b0c629f6, type: 3}
+    amount: 15
+    projectile_list: []
+  - projectile: {fileID: 3624629500245990377, guid: ec6ded294a271214e91fae8c012ead73, type: 3}
+    amount: 5
+    projectile_list: []
+  - projectile: {fileID: 3624629500245990377, guid: ac94da5963bb54e48809fbc8145ecec9, type: 3}
+    amount: 5
+    projectile_list: []
+  - projectile: {fileID: 3624629500245990377, guid: ad97ffb59df5e3244bb3d11867bf7361, type: 3}
+    amount: 3
+    projectile_list: []
 --- !u!1 &1686509947
 GameObject:
   m_ObjectHideFlags: 0

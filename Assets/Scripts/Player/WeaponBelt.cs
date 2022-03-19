@@ -2,6 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PoolWeaponIndex
+{
+    k_pistol = 0,
+    k_assault_rile = 1,
+    k_shotgun = 2,
+    k_sniper = 3,
+    k_launcher = 4,
+    k_enemy_gun = 5,
+}
+
+
 public class WeaponBelt : MonoBehaviour
 {
     private PlayerController player_controller;
@@ -32,6 +43,7 @@ public class WeaponBelt : MonoBehaviour
     private void Start()
     {
         SwapWeapon(default_weapon);
+        shoot_cooldown = 0f;
     }
 
     private void Update()
@@ -85,7 +97,12 @@ public class WeaponBelt : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet_obj = Instantiate(current_weapon.projectile, muzzle.position, Quaternion.identity);
+        GameObject bullet_obj = PoolManager.pool_instance.GetPooledProjectile((int)current_weapon.weapon_type);
+
+        bullet_obj.SetActive(true);
+        bullet_obj.transform.position = muzzle.position;
+        bullet_obj.transform.rotation = Quaternion.identity;
+        bullet_obj.SetActive(true);
         bullet_obj.GetComponent<Projectiles>().damage = current_weapon.damage;
         bullet_obj.GetComponent<Projectiles>().Fire(player_controller.IsFacingRight(), current_weapon.proj_speed);
 

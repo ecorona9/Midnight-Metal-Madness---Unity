@@ -26,13 +26,13 @@ public class Projectiles : MonoBehaviour
 
     private void OnCollisionEnter2D()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Destroy the bullet when it has left the camera's vision
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 
