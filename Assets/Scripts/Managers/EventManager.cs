@@ -17,12 +17,16 @@ public class EventManager : MonoBehaviour
 
     public event Action OnPlayerDeath;
 
+    public event Action<int> OnPlayerShoot;
+
+    public event Action<int, Sprite> OnPlayerSwapWeapon;
+
     private void Awake()
     {
         instance = this;
     }
 
-    public void DecreasePlayerHealthInUI(int value)
+    public void DisplayPlayerHealth(int value)
     {
         OnPlayerTakesDamage?.Invoke(value);
     }
@@ -31,4 +35,16 @@ public class EventManager : MonoBehaviour
     {
         OnPlayerDeath?.Invoke();
     }
+
+    public void DisplayCurrentAmmoCount(int value)
+    {
+        OnPlayerShoot?.Invoke(value);
+    }
+
+    public void DisplayMaximumAmmoCount(int value, Sprite image)
+    {
+        OnPlayerSwapWeapon?.Invoke(value, image);
+    }
+
+
 }

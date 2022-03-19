@@ -48,13 +48,16 @@ public class WeaponBelt : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown && current_ammo_count > 0)
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown)
         {
-            shoot_cooldown = Time.time + current_weapon.shoot_cooldown;
-            Shoot();
+            if (current_ammo_count > 0 || current_weapon == default_weapon)
+            {
+                shoot_cooldown = Time.time + current_weapon.shoot_cooldown;
+                Shoot();
+            }
         }
 
-        if (current_ammo_count <= 0)
+        if (current_ammo_count <= 0 && current_weapon != default_weapon)
         {
             SwapWeapon(default_weapon);
         }
@@ -82,6 +85,9 @@ public class WeaponBelt : MonoBehaviour
         muzzle.localPosition = obj.muzzle_position;
         proj_weapon.localPosition = obj.weapon_position;
         proj_weapon_sprite.sprite = obj.weapon_sprite;
+
+        EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
+        EventManager.instance.DisplayMaximumAmmoCount(current_ammo_count, obj.weapon_sprite);
         // TODO: Swap Animation Controllers
     }
 
@@ -113,6 +119,7 @@ public class WeaponBelt : MonoBehaviour
         else
         {
             current_ammo_count--;
+            EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
         }
     }
 }

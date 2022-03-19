@@ -4758,6 +4758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 561648441}
+  - component: {fileID: 561648442}
   m_Layer: 5
   m_Name: Ammo
   m_TagString: Untagged
@@ -4776,17 +4777,32 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1759078908}
   - {fileID: 1106583217}
+  - {fileID: 1759078908}
   - {fileID: 1170793867}
   m_Father: {fileID: 981935574}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 658, y: -80}
+  m_AnchoredPosition: {x: 240, y: -182}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &561648442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561648440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480a76c2aa24214197dfb163edaa0b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_ammo: {fileID: 1106583218}
+  maximum_ammo: {fileID: 1759078909}
+  current_weapon: {fileID: 1170793868}
 --- !u!1 &735036038
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,7 +5669,7 @@ GameObject:
   - component: {fileID: 1106583219}
   - component: {fileID: 1106583218}
   m_Layer: 5
-  m_Name: X
+  m_Name: Current Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5671,11 +5687,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 561648441}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: 0}
+  m_AnchoredPosition: {x: -14, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106583218
@@ -5711,7 +5727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x
+  m_Text: 0
 --- !u!222 &1106583219
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5754,8 +5770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: 0}
-  m_SizeDelta: {x: 84, y: 63}
+  m_AnchoredPosition: {x: -111.89996, y: 0}
+  m_SizeDelta: {x: 108.937, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1170793868
 MonoBehaviour:
@@ -6587,7 +6603,7 @@ GameObject:
   - component: {fileID: 1759078910}
   - component: {fileID: 1759078909}
   m_Layer: 5
-  m_Name: Count
+  m_Name: Total Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6605,11 +6621,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 561648441}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: 0}
+  m_AnchoredPosition: {x: 112.90003, y: 0}
   m_SizeDelta: {x: 175.5, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759078909
@@ -6645,7 +6661,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: / 0
 --- !u!222 &1759078910
 CanvasRenderer:
   m_ObjectHideFlags: 0

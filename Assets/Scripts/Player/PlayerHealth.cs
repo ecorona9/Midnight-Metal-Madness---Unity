@@ -42,9 +42,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        EventManager.instance.DecreasePlayerHealthInUI(dmg);
+        EventManager.instance.DisplayPlayerHealth(dmg);
         health -= dmg;
-        Vector3 offset = new Vector3(0f, 2f, 0f);
+        Vector3 offset = new Vector3(0f, 1.5f, 0f);
         GameObject text_popup = Instantiate(damage_text, transform.position + offset, transform.rotation);
         string text = "-" + dmg.ToString();
         text_popup.GetComponent<FloatingTextDisplay>().SetText(text, Color.red);
