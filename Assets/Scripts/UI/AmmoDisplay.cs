@@ -13,10 +13,13 @@ public class AmmoDisplay : MonoBehaviour
     [SerializeField] private Text maximum_ammo;
     [SerializeField] private Image current_weapon;
 
+    private Animator current_ammo_animator;
+
     private void Start()
     {
         EventManager.instance.OnPlayerShoot += SetCurrentAmmo;
         EventManager.instance.OnPlayerSwapWeapon += SetMaximumAmmo;
+        current_ammo_animator = current_ammo.gameObject.GetComponent<Animator>();
     }
 
     private void SetCurrentAmmo(int value)
@@ -28,6 +31,7 @@ public class AmmoDisplay : MonoBehaviour
         else
         {
             current_ammo.text = value.ToString();
+            current_ammo_animator.SetTrigger("AmmoChange");
         }
     }
 
