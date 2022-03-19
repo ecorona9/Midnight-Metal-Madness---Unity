@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -1448.4657, y: -768.3856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68072951
 MonoBehaviour:
@@ -830,7 +830,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 385.4878
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
