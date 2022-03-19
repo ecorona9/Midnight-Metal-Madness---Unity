@@ -16,8 +16,8 @@ MonoBehaviour:
   damage: 50
   weapon_sprite: {fileID: 21300000, guid: 134fbfc7dead9da4c87f06ea73dfa19c, type: 3}
   shoot_cooldown: 0.1
-  weapon_position: {x: 1.02, y: 0.97, z: 0}
-  muzzle_position: {x: 2.1, y: 1.16, z: 0}
+  weapon_position: {x: 0.52, y: 0.52, z: 0}
+  muzzle_position: {x: 0.93, y: 0.62, z: 0}
   projectile: {fileID: 3624629500245990377, guid: 4a9bda4e6d65b63408f9909ccb2fb516, type: 3}
   ammo_count: 1
   proj_speed: 25
