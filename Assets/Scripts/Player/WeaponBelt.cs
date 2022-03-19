@@ -2,6 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PoolWeaponIndex
+{
+    k_pistol = 0,
+    k_assault_rile = 1,
+    k_shotgun = 2,
+    k_sniper = 3,
+    k_launcher = 4,
+    k_enemy_gun = 5,
+}
+
+
 public class WeaponBelt : MonoBehaviour
 {
     private PlayerController player_controller;
@@ -32,17 +43,21 @@ public class WeaponBelt : MonoBehaviour
     private void Start()
     {
         SwapWeapon(default_weapon);
+        shoot_cooldown = 0f;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown && current_ammo_count > 0)
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > shoot_cooldown)
         {
-            shoot_cooldown = Time.time + current_weapon.shoot_cooldown;
-            Shoot();
+            if (current_ammo_count > 0 || current_weapon == default_weapon)
+            {
+                shoot_cooldown = Time.time + current_weapon.shoot_cooldown;
+                Shoot();
+            }
         }
 
-        if (current_ammo_count <= 0)
+        if (current_ammo_count <= 0 && current_weapon != default_weapon)
         {
             SwapWeapon(default_weapon);
         }
@@ -70,6 +85,9 @@ public class WeaponBelt : MonoBehaviour
         muzzle.localPosition = obj.muzzle_position;
         proj_weapon.localPosition = obj.weapon_position;
         proj_weapon_sprite.sprite = obj.weapon_sprite;
+
+        EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
+        EventManager.instance.DisplayMaximumAmmoCount(current_ammo_count, obj.weapon_sprite);
         // TODO: Swap Animation Controllers
     }
 
@@ -85,7 +103,13 @@ public class WeaponBelt : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet_obj = Instantiate(current_weapon.projectile, muzzle.position, Quaternion.identity);
+        GameObject bullet_obj = PoolManager.pool_instance.GetPooledProjectile((int)current_weapon.weapon_type);
+
+        bullet_obj.SetActive(true);
+        bullet_obj.transform.position = muzzle.position;
+        bullet_obj.transform.rotation = Quaternion.identity;
+        bullet_obj.SetActive(true);
+        bullet_obj.GetComponent<Projectiles>().damage = current_weapon.damage;
         bullet_obj.GetComponent<Projectiles>().Fire(player_controller.IsFacingRight(), current_weapon.proj_speed);
 
         if (current_weapon == default_weapon)
@@ -95,6 +119,7 @@ public class WeaponBelt : MonoBehaviour
         else
         {
             current_ammo_count--;
+            EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
         }
     }
 }

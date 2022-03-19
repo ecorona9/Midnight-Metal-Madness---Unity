@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour
 {
+    public int damage;
+
     private Rigidbody2D projectile_rigidbody;
 
     private void Awake()
@@ -24,13 +26,13 @@ public class Projectiles : MonoBehaviour
 
     private void OnCollisionEnter2D()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Destroy the bullet when it has left the camera's vision
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 

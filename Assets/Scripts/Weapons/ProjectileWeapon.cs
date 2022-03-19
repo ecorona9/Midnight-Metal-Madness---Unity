@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public enum ProjectileWeaponType { Pistol, AssaultRifle, Shotgun, Sniper, Launcher}
-
 [CreateAssetMenu(fileName = "New ProjectileWeapon", menuName = "Items/Weapons/Projectile Weapon")]
 public class ProjectileWeapon : ScriptableObject
 {
-    public ProjectileWeaponType type;
+    public PoolWeaponIndex weapon_type;
 
     public int damage;
 
@@ -19,9 +17,6 @@ public class ProjectileWeapon : ScriptableObject
 
     [Header("The local position of the muzzle object")]
     public Vector3 muzzle_position;
-
-    [Header("The projectile that is being fired")]
-    public GameObject projectile;
 
     public int ammo_count;
 

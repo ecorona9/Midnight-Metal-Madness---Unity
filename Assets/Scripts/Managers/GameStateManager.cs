@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    private enum State { Start, Running, Paused, Death, GameOver, Victory }
+    [SerializeField] private PauseInterface pause_ui;
+    [SerializeField] private Animator game_over_ui;
+    [SerializeField] private Animator victory_ui;
+
+    private enum State { Start, Running, Paused, Death, Lost, Victory }
 
     public static GameStateManager instance { get; private set; }
 
@@ -18,6 +22,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Start()
     {
+        EventManager.instance.OnPlayerDeath += EndGame;
         current_state = State.Start;
         ActivateState();
     }
@@ -36,17 +41,26 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
+                pause_ui.ShowPauseMenu();
                 Time.timeScale = 0f;
                 break;
 
             case State.Death:
-                // Store high score with PlayerPref
-                break;
-
-            case State.GameOver:
-                break;
-
+                {
+                    // TODO: some death animation
+                    Debug.Log("You have Died");
+                    TransitionState(State.Lost);
+                    break;
+                }
+            case State.Lost:
+                {
+                    //game_over_ui.SetActive(true);
+                    Time.timeScale = 0f;
+                    Debug.Log("Show game over ui.");
+                    break;
+                }
             case State.Victory:
+                //victory_ui.SetActive(true);
                 break;
 
             default:
@@ -65,16 +79,19 @@ public class GameStateManager : MonoBehaviour
                 break;
 
             case State.Paused:
+                pause_ui.HidePauseMenu();
                 Time.timeScale = 1f;
                 break;
 
             case State.Death:
                 break;
 
-            case State.GameOver:
+            case State.Lost:
+                //game_over_ui.SetActive(false);
                 break;
 
             case State.Victory:
+                //victory_ui.SetActive(false);
                 break;
 
             default:
@@ -117,14 +134,32 @@ public class GameStateManager : MonoBehaviour
             case State.Death:
                 break;
 
-            case State.GameOver:
+            case State.Lost:
                 break;
-
             case State.Victory:
                 break;
 
             default:
                 break;
         }
+    }
+
+    public bool IsGameOver()
+    {
+        if (current_state == State.Lost || current_state == State.Victory)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void EndGame()
+    {
+        TransitionState(State.Death);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.instance.OnPlayerDeath -= EndGame;
     }
 }

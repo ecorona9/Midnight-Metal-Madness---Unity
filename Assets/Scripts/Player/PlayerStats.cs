@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     [Header("Player Variables")]
+    public int maximum_health;
     public float horizontal_speed;
     public float jump_force;
 }
