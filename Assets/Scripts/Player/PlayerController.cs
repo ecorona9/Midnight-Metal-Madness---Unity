@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D player_rigidbody;
-    private CapsuleCollider2D player_collider;
     private Animator player_animator;
 
     [Header("Player Stats")]
@@ -38,7 +37,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         player_rigidbody = GetComponent<Rigidbody2D>();
-        player_collider = GetComponent<CapsuleCollider2D>();
         player_animator = GetComponent<Animator>();
     }
 
@@ -205,10 +203,4 @@ public class PlayerController : MonoBehaviour
     {
         return is_facing_right;
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(ground_check_point.position, ground_check_radius);
-    }
-
 }

@@ -6,7 +6,7 @@
  */
 using UnityEngine;
 
-public class PauseInterface : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private Animator pause_menu;
 
