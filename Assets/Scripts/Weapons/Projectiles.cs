@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectiles : MonoBehaviour
 {
-    public int damage;
+    [HideInInspector] public int damage;
 
     private Rigidbody2D projectile_rigidbody;
 

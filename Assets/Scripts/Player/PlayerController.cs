@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [Header("Player Stats")]
     [SerializeField] private PlayerStats player_stats;
 
+    [Header("Player Sprite")]
+    [SerializeField] private Transform player_sprite;
+
     [Header("Ground Check")]
     [SerializeField] private Transform ground_check_point;
     [SerializeField] private LayerMask ground_mask; 
@@ -71,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(is_on_slope);
         if (Time.timeScale != 0f && !GameStateManager.instance.IsGameOver())
         {
             // Ground Check
@@ -157,8 +161,8 @@ public class PlayerController : MonoBehaviour
 
             downward_slope_angle_old = downward_slope_angle;
 
-            //Debug.DrawRay(ray_hit.point, slope_norm_perp, Color.red);
-            //Debug.DrawRay(ray_hit.point, ray_hit.normal, Color.red);
+            Debug.DrawRay(ray_hit.point, slope_norm_perp, Color.red);
+            Debug.DrawRay(ray_hit.point, ray_hit.normal, Color.red);
         }
 
         if (downward_slope_angle > max_slope_angle || side_slope_angle > max_slope_angle)
@@ -182,9 +186,9 @@ public class PlayerController : MonoBehaviour
 
     private void FlipCharacter()
     {
-        Vector3 current_scale = transform.localScale;
+        Vector3 current_scale = player_sprite.transform.localScale;
         current_scale.x *= -1;
-        transform.localScale = current_scale;
+        player_sprite.transform.localScale = current_scale;
         is_facing_right = !is_facing_right;
     }
 
