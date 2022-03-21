@@ -4,21 +4,8 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("TOUCHED COIN");
-        Destroy(transform.gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }
