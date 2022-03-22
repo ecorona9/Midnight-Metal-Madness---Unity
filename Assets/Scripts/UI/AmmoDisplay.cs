@@ -19,12 +19,10 @@ namespace MidnightMetalMadness.UI
 
         private void Start()
         {
-            EventManager.instance.OnPlayerShoot += SetCurrentAmmo;
-            EventManager.instance.OnPlayerSwapWeapon += SetMaximumAmmo;
             current_ammo_animator = current_ammo.gameObject.GetComponent<Animator>();
         }
 
-        private void SetCurrentAmmo(int value)
+        public void SetCurrentAmmo(int value)
         {
             if (value == -1)
             {
@@ -37,7 +35,7 @@ namespace MidnightMetalMadness.UI
             }
         }
 
-        private void SetMaximumAmmo(int value, Sprite image)
+        public void SetMaximumAmmo(int value)
         {
             if (value == -1)
             {
@@ -47,13 +45,11 @@ namespace MidnightMetalMadness.UI
             {
                 maximum_ammo.text = "/  " + value.ToString();
             }
-            current_weapon.sprite = image;
         }
 
-        private void OnDestroy()
+        public void SetWeaponSprite(Sprite sprite)
         {
-            EventManager.instance.OnPlayerShoot -= SetCurrentAmmo;
-            EventManager.instance.OnPlayerSwapWeapon -= SetMaximumAmmo;
+            current_weapon.sprite = sprite;
         }
     }
 }

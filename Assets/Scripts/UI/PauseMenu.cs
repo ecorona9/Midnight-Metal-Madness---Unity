@@ -12,26 +12,16 @@ namespace MidnightMetalMadness.UI
     {
         [SerializeField] private Animator pause_menu;
 
-        private void Start()
+        public void ShowPauseMenu(bool condition)
         {
-            EventManager.instance.OnPlayerPause += ShowPauseMenu;
-            EventManager.instance.OnPlayerUnpause += HidePauseMenu;
-        }
-
-        private void HidePauseMenu()
-        {
-            pause_menu.SetTrigger("HidePauseMenu");
-        }
-
-        private void ShowPauseMenu()
-        {
-            pause_menu.SetTrigger("ShowPauseMenu");
-        }
-
-        private void OnDestroy()
-        {
-            EventManager.instance.OnPlayerPause -= ShowPauseMenu;
-            EventManager.instance.OnPlayerUnpause -= HidePauseMenu;
+            if (condition)
+            {
+                pause_menu.SetTrigger("ShowPauseMenu");
+            }
+            else
+            {
+                pause_menu.SetTrigger("HidePauseMenu");
+            }
         }
     }
 }

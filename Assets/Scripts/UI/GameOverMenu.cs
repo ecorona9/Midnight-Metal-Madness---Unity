@@ -12,11 +12,10 @@ namespace MidnightMetalMadness.UI
     {
         private void Start()
         {
-            EventManager.instance.OnPlayerDeath += ShowGameOverMenu;
             gameObject.SetActive(false);
         }
 
-        private void ShowGameOverMenu()
+        public void ShowGameOverMenu()
         {
             gameObject.SetActive(true);
         }
@@ -29,11 +28,6 @@ namespace MidnightMetalMadness.UI
         public void Quit()
         {
             Application.Quit();
-        }
-
-        private void OnDestroy()
-        {
-            EventManager.instance.OnPlayerDeath += ShowGameOverMenu;
         }
     }
 }

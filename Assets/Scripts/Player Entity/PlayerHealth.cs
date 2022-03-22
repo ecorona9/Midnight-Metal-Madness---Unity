@@ -15,6 +15,9 @@ namespace MidnightMetalMadness.Entity.Player
 
         [SerializeField] private GameObject damage_text;
 
+        [SerializeField] private IntEventSO player_health_channel;
+        [SerializeField] private VoidEventSO game_over_channel;
+
         private int health;
 
         private void Start()
@@ -31,15 +34,15 @@ namespace MidnightMetalMadness.Entity.Player
             }
         }
 
-        public void TakeDamage(int dmg)
+        private void TakeDamage(int dmg)
         {
-            EventManager.instance.DisplayPlayerHealth(dmg);
+            player_health_channel.RaiseEvent(dmg);
             health -= dmg;
             SpawnDamageText(dmg);
 
             if (health <= 0f)
             {
-                EventManager.instance.LoseGame();
+                game_over_channel.RaiseEvent();
                 gameObject.SetActive(false);
             }
         }

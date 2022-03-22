@@ -30,18 +30,12 @@ namespace MidnightMetalMadness.UI
             current_health = player_stats.maximum_health;
             maximum_health = player_stats.maximum_health;
             hp_slider.fillAmount = current_health / maximum_health;
-            EventManager.instance.OnPlayerTakesDamage += DecreaseHealth;
         }
 
-        private void DecreaseHealth(int dmg)
+        public void DecreaseHealth(int dmg)
         {
             current_health -= dmg;
             hp_slider.fillAmount = current_health / maximum_health;
-        }
-
-        private void OnDestroy()
-        {
-            EventManager.instance.OnPlayerTakesDamage -= DecreaseHealth;
         }
     }
 }

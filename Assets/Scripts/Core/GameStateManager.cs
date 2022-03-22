@@ -5,22 +5,16 @@ using UnityEngine;
 
 namespace MidnightMetalMadness
 {
+    public enum State { Start, Running, Paused, Death, Lost, Victory }
+
     public class GameStateManager : MonoBehaviour
     {
-        private enum State { Start, Running, Paused, Death, Lost, Victory }
-
-        public static GameStateManager instance { get; private set; }
-
         private State current_state;
 
-        private void Awake()
-        {
-            instance = this;
-        }
+        [SerializeField] private BoolEventSO pause_channel;
 
         private void Start()
         {
-            EventManager.instance.OnPlayerDeath += EndGame;
             current_state = State.Start;
             ActivateState();
         }
@@ -30,23 +24,22 @@ namespace MidnightMetalMadness
             switch (current_state)
             {
                 case State.Start:
-                    // Makes sure the game is resumed when the scene restarts
-                    Time.timeScale = 1f;
-                    TransitionState(State.Running);
-                    break;
-
+                    {
+                        Time.timeScale = 1f;
+                        TransitionState(State.Running);
+                        break;
+                    }
                 case State.Running:
                     break;
 
                 case State.Paused:
                     {
-                        EventManager.instance.ShowPauseMenu();
+                        pause_channel.RaiseEvent(true);
                         Time.timeScale = 0f;
                         break;
                     }
                 case State.Death:
                     {
-                        // TODO: some death animation
                         Debug.Log("You have Died");
                         TransitionState(State.Lost);
                         break;
@@ -79,13 +72,12 @@ namespace MidnightMetalMadness
 
                 case State.Paused:
                     {
-                        EventManager.instance.HidePauseMenu();
+                        pause_channel.RaiseEvent(false);
                         Time.timeScale = 1f;
                         break;
                     }
                 case State.Death:
                     break;
-
                 case State.Lost:
                     {
                         Time.timeScale = 1f;
@@ -142,23 +134,9 @@ namespace MidnightMetalMadness
             }
         }
 
-        public bool IsGameOver()
-        {
-            if (current_state == State.Lost || current_state == State.Victory)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public void EndGame()
+        public void TransitionToLostState()
         {
             TransitionState(State.Death);
-        }
-
-        private void OnDestroy()
-        {
-            EventManager.instance.OnPlayerDeath -= EndGame;
         }
     }
 }

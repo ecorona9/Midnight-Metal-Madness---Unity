@@ -8,6 +8,11 @@ namespace MidnightMetalMadness.Entity.Player
 {
     public class WeaponBelt : MonoBehaviour
     {
+        [SerializeField] private IntEventSO current_ammo_channel;
+        [SerializeField] private IntEventSO maximum_ammo_channel;
+        [SerializeField] private SpriteEventSO sprite_change_channel;
+        
+
         private PlayerController player_controller;
         private SpriteRenderer proj_weapon_sprite;
         private Animator proj_weapon_animator;
@@ -62,6 +67,7 @@ namespace MidnightMetalMadness.Entity.Player
             if (IsDuplicateWeapon(obj))
             {
                 current_ammo_count = current_weapon.ammo_count;
+                current_ammo_channel.RaiseEvent(current_ammo_count);
             }
             else
             {
@@ -78,9 +84,9 @@ namespace MidnightMetalMadness.Entity.Player
             proj_weapon.localPosition = obj.weapon_position;
             proj_weapon_sprite.sprite = obj.weapon_sprite;
 
-            EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
-            EventManager.instance.DisplayMaximumAmmoCount(current_ammo_count, obj.weapon_sprite);
-            // TODO: Swap Animation Controllers
+            maximum_ammo_channel.RaiseEvent(obj.ammo_count);
+            current_ammo_channel.RaiseEvent(obj.ammo_count);
+            sprite_change_channel.RaiseEvent(current_weapon.weapon_sprite);
         }
 
         private bool IsDuplicateWeapon(ProjectileWeapon obj)
@@ -107,7 +113,7 @@ namespace MidnightMetalMadness.Entity.Player
             else
             {
                 current_ammo_count--;
-                EventManager.instance.DisplayCurrentAmmoCount(current_ammo_count);
+                current_ammo_channel.RaiseEvent(current_ammo_count);
             }
         }
     }

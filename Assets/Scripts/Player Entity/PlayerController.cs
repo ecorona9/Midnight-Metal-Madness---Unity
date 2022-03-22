@@ -51,7 +51,7 @@ namespace MidnightMetalMadness.Entity.Player
 
         private void Update()
         {
-            if (Time.timeScale != 0f && !GameStateManager.instance.IsGameOver())
+            if (Time.timeScale != 0f)
             {
                 xraw = Input.GetAxisRaw("Horizontal");
 
@@ -74,7 +74,7 @@ namespace MidnightMetalMadness.Entity.Player
 
         private void FixedUpdate()
         {
-            if (Time.timeScale != 0f && !GameStateManager.instance.IsGameOver())
+            if (Time.timeScale != 0f)
             {
                 IsGrounded();
                 CanJump();
