@@ -1,12 +1,20 @@
 using UnityEngine;
+using MidnightMetalMadness.Entity.Weapons;
+using MidnightMetalMadness.Entity.Player;
 
-public class CarePackage : MonoBehaviour
+namespace MidnightMetalMadness.Entity.Collectibles
 {
-    [SerializeField] private ProjectileWeapon weapon;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class CarePackage : MonoBehaviour
     {
-        other.gameObject.GetComponent<WeaponBelt>().ChangeToCarePackageWeapon(weapon);
-        Destroy(transform.parent.gameObject);
+        [SerializeField] private ProjectileWeapon weapon;
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<WeaponBelt>().ChangeToCarePackageWeapon(weapon);
+                Destroy(transform.parent.gameObject);
+            }
+        }
     }
 }

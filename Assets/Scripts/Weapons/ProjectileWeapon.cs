@@ -1,25 +1,38 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New ProjectileWeapon", menuName = "Items/Weapons/Projectile Weapon")]
-public class ProjectileWeapon : ScriptableObject
+namespace MidnightMetalMadness.Entity.Weapons
 {
-    public PoolWeaponIndex weapon_type;
+    public enum PoolWeaponIndex
+    {
+        k_pistol = 0,
+        k_assault_rile = 1,
+        k_shotgun = 2,
+        k_sniper = 3,
+        k_launcher = 4,
+        k_enemy_gun = 5,
+    }
 
-    public int damage;
+    [CreateAssetMenu(fileName = "New ProjectileWeapon", menuName = "Items/Weapons/Projectile Weapon")]
+    public class ProjectileWeapon : ScriptableObject
+    {
+        public PoolWeaponIndex weapon_type;
 
-    public Sprite weapon_sprite;
+        public int damage;
 
-    [Header("Fire Rate")]
-    public float shoot_cooldown;
+        public Sprite weapon_sprite;
 
-    [Header("The local position of the weapon object")]
-    public Vector3 weapon_position;
+        [Header("Fire Rate")]
+        public float shoot_cooldown;
 
-    [Header("The local position of the muzzle object")]
-    public Vector3 muzzle_position;
+        [Header("The local position of the weapon object")]
+        public Vector3 weapon_position;
 
-    public int ammo_count;
+        [Header("The local position of the muzzle object")]
+        public Vector3 muzzle_position;
 
-    public float proj_speed;
+        public int ammo_count;
 
+        public float proj_speed;
+
+    }
 }

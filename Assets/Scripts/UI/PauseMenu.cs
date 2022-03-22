@@ -6,19 +6,32 @@
  */
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+namespace MidnightMetalMadness.UI
 {
-    [SerializeField] private Animator pause_menu;
-
-    public void HidePauseMenu()
+    public class PauseMenu : MonoBehaviour
     {
-        pause_menu.SetTrigger("HidePauseMenu");
-    }
+        [SerializeField] private Animator pause_menu;
 
-    public void ShowPauseMenu()
-    {
-        pause_menu.SetTrigger("ShowPauseMenu");
-    }
+        private void Start()
+        {
+            EventManager.instance.OnPlayerPause += ShowPauseMenu;
+            EventManager.instance.OnPlayerUnpause += HidePauseMenu;
+        }
 
-    
+        private void HidePauseMenu()
+        {
+            pause_menu.SetTrigger("HidePauseMenu");
+        }
+
+        private void ShowPauseMenu()
+        {
+            pause_menu.SetTrigger("ShowPauseMenu");
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.instance.OnPlayerPause -= ShowPauseMenu;
+            EventManager.instance.OnPlayerUnpause -= HidePauseMenu;
+        }
+    }
 }

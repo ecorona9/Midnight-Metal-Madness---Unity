@@ -6,15 +6,34 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour
+namespace MidnightMetalMadness.UI
 {
-    public void Retry()
+    public class GameOverMenu : MonoBehaviour
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-    }
+        private void Start()
+        {
+            EventManager.instance.OnPlayerDeath += ShowGameOverMenu;
+            gameObject.SetActive(false);
+        }
 
-    public void Quit()
-    {
-        Application.Quit();
+        private void ShowGameOverMenu()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void Retry()
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.instance.OnPlayerDeath += ShowGameOverMenu;
+        }
     }
 }
