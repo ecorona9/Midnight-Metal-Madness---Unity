@@ -38,6 +38,12 @@ public class PlayerHealth : MonoBehaviour
             int dmg = collision.gameObject.GetComponent<Projectiles>().damage;
             TakeDamage(dmg);
         }
+
+        if (collision.gameObject.CompareTag("HealingUnit"))
+        {
+            int dmg = collision.gameObject.GetComponent<HealingUnit>().healing;
+            TakeDamage(-dmg);
+        }
     }
 
     public void TakeDamage(int dmg)

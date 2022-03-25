@@ -7,6 +7,7 @@ TagManager:
   - Care Package
   - Currency
   - Projectiles
+  - HealingUnit
   layers:
   - Default
   - TransparentFX
