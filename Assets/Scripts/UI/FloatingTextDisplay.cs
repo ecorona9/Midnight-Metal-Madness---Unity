@@ -8,18 +8,21 @@
  */
 using UnityEngine;
 
-public class FloatingTextDisplay : MonoBehaviour
+namespace MidnightMetalMadness.UI
 {
-    [SerializeField] private TextMesh text_str;
-
-    private void Start()
+    public class FloatingTextDisplay : MonoBehaviour
     {
-        Destroy(gameObject, 0.3f);
-    }
+        [SerializeField] private TextMesh text_str;
 
-    public void SetText(string str, Color text_color)
-    {
-        text_str.color = text_color;
-        text_str.text = str;
+        private void Start()
+        {
+            Destroy(gameObject, 0.3f);
+        }
+
+        public void SetText(string str, Color text_color)
+        {
+            text_str.color = text_color;
+            text_str.text = str;
+        }
     }
 }
