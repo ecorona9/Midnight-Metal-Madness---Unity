@@ -8,10 +8,10 @@ namespace MidnightMetalMadness
     public enum State { Start, Running, Paused, Death, Lost, Victory }
 
     public class GameStateManager : MonoBehaviour
-    {
-        private State current_state;
-
+    {     
         [SerializeField] private BoolEventSO pause_channel;
+
+        private State current_state;
 
         private void Start()
         {

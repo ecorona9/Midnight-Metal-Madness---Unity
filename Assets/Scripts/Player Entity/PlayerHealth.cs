@@ -12,9 +12,7 @@ namespace MidnightMetalMadness.Entity.Player
     public class PlayerHealth : MonoBehaviour
     {
         [SerializeField] private PlayerStats player_stats;
-
         [SerializeField] private GameObject damage_text;
-
         [SerializeField] private IntEventSO player_health_channel;
         [SerializeField] private VoidEventSO game_over_channel;
 

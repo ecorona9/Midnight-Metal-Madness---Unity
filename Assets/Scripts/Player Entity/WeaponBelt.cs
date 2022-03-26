@@ -8,15 +8,11 @@ namespace MidnightMetalMadness.Entity.Player
 {
     public class WeaponBelt : MonoBehaviour
     {
+        [Header("Event Channels")]
         [SerializeField] private IntEventSO current_ammo_channel;
         [SerializeField] private IntEventSO maximum_ammo_channel;
         [SerializeField] private SpriteEventSO sprite_change_channel;
         
-
-        private PlayerController player_controller;
-        private SpriteRenderer proj_weapon_sprite;
-        private Animator proj_weapon_animator;
-
         [Header("Transform of Projectile Weapon")]
         [SerializeField] private Transform proj_weapon;
         [SerializeField] private Transform muzzle;
@@ -24,11 +20,11 @@ namespace MidnightMetalMadness.Entity.Player
         [Header("Default Weapon")]
         [SerializeField] private ProjectileWeapon default_weapon;
 
+        private PlayerController player_controller;
+        private SpriteRenderer proj_weapon_sprite;
+        private Animator proj_weapon_animator;      
         private ProjectileWeapon current_weapon;
-
         private int current_ammo_count;
-
-        // Basically fire rate, but this is the least amount of time between each click
         private float shoot_cooldown;
 
         private void Awake()
