@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Care Package
   - Currency
+  - Projectiles
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Projectiles
   - Triggers
   - Items
-  - 
-  - 
-  - 
+  - Background
+  - Lights
+  - Text Popups
   - 
   - 
   - 
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 795765185
+    locked: 0
+  - name: Foreground
+    uniqueID: 3606427439
     locked: 0
   - name: Items
     uniqueID: 1966143023
