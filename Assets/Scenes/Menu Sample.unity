@@ -313,6 +313,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5595968510249076966, guid: 40e88549cd172774d9bbc2ca075f61da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595968510249076966, guid: 40e88549cd172774d9bbc2ca075f61da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5595968510557580080, guid: 40e88549cd172774d9bbc2ca075f61da, type: 3}
       propertyPath: m_Pivot.x
       value: 0
