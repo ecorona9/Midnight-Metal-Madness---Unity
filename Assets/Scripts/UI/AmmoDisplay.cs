@@ -39,11 +39,11 @@ namespace MidnightMetalMadness.UI
         {
             if (value == -1)
             {
-                maximum_ammo.text = "/  " + "\u221E";   // infinity in unicode
+                maximum_ammo.text = "/ " + "\u221E";   // infinity in unicode
             }
             else
             {
-                maximum_ammo.text = "/  " + value.ToString();
+                maximum_ammo.text = "/ " + value.ToString();
             }
         }
 

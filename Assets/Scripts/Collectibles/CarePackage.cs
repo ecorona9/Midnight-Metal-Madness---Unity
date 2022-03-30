@@ -1,3 +1,7 @@
+// SUMMARY:
+// 
+// Requires a collider2d component and the gameobject layer to be "Trigger"
+//
 using UnityEngine;
 using MidnightMetalMadness.Entity.Weapons;
 using MidnightMetalMadness.Entity.Player;
@@ -9,12 +13,9 @@ namespace MidnightMetalMadness.Entity.Collectibles
         [SerializeField] private ProjectileWeapon weapon;
 
         private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                other.gameObject.GetComponent<WeaponBelt>().ChangeToCarePackageWeapon(weapon);
-                Destroy(transform.parent.gameObject);
-            }
+        { 
+            other.gameObject?.GetComponent<WeaponBelt>().ChangeToCarePackageWeapon(weapon);
+            Destroy(transform.parent.gameObject);
         }
     }
 }

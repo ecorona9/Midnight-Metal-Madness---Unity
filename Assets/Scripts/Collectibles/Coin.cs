@@ -1,11 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+// SUMMARY:
+// 
+// Requires a collider2d component and the gameobject layer to be "Trigger"
+//
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+namespace MidnightMetalMadness.Entity.Collectibles
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    public class Coin : MonoBehaviour
     {
-        Destroy(transform.parent.gameObject);
+        [SerializeField] private VoidEventSO coin_channel;
+
+        private void OnTriggerEnter2D()
+        {
+            coin_channel.RaiseEvent();
+            Destroy(transform.gameObject);
+        }
     }
 }

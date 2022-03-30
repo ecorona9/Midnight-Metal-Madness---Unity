@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
-{
-    // Start is called before the first frame update
+{ 
+    [SerializeField] private float waitTime;
 
-    PlatformEffector2D effector;
-    [SerializeField] float waitTime;
-    void Start()
+    private PlatformEffector2D effector;
+ 
+    private void Awake()
     {
         effector = GetComponent<PlatformEffector2D>();
     }
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
         float movy = Input.GetAxisRaw("Vertical");
         if(Input.GetKeyUp(KeyCode.S)) {
