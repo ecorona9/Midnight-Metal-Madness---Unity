@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8533237499867117457}
   m_Layer: 8
   m_Name: Healing Unit
-  m_TagString: HealingUnit
+  m_TagString: Health Changer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

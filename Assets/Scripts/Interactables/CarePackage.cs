@@ -3,10 +3,9 @@
 // Requires a collider2d component and the gameobject layer to be "Trigger"
 //
 using UnityEngine;
-using MidnightMetalMadness.Entity.Weapons;
 using MidnightMetalMadness.Entity.Player;
 
-namespace MidnightMetalMadness.Entity.Collectibles
+namespace MidnightMetalMadness.Entity.Interactables
 {
     public class CarePackage : MonoBehaviour
     {

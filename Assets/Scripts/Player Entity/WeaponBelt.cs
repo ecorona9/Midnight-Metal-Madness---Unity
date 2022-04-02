@@ -99,14 +99,20 @@ namespace MidnightMetalMadness.Entity.Player
             GameObject pooled_projectile = PoolManager.pool_instance.GetPooledProjectile((int)current_weapon.weapon_type);
             pooled_projectile.SetActive(true);
             var bullet = pooled_projectile.GetComponent<Projectiles>();
-            pooled_projectile.transform.SetPositionAndRotation(muzzle.position, Quaternion.identity);
-            bullet.Fire(player_controller.IsFacingRight(), current_weapon.proj_speed, current_weapon.damage);
 
-            if (current_weapon == default_weapon)
+            bool is_facing_right = player_controller.IsFacingRight();
+            if (is_facing_right)
             {
-                // TODO: Play gun sound here
+                pooled_projectile.transform.SetPositionAndRotation(muzzle.position, Quaternion.identity);
             }
             else
+            {
+                pooled_projectile.transform.SetPositionAndRotation(muzzle.position, Quaternion.Euler(0f, 180f, 0f));
+            }
+
+            bullet.Fire(is_facing_right, current_weapon.proj_speed, current_weapon.damage);
+
+            if (current_weapon != default_weapon)
             {
                 current_ammo_count--;
                 current_ammo_channel.RaiseEvent(current_ammo_count);

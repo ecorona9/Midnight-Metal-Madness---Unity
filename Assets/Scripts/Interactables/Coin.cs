@@ -4,7 +4,7 @@
 //
 using UnityEngine;
 
-namespace MidnightMetalMadness.Entity.Collectibles
+namespace MidnightMetalMadness.Entity.Interactables
 {
     public class Coin : MonoBehaviour
     {

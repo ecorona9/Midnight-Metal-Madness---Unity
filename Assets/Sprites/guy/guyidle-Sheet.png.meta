@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 085642ece7efa6b48a32d93cedba30a8
+guid: ec29aa55a49884f4094d236688fabcd5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7362661061344524757
-    second: guns_0
+      213: -7647310525038269968
+    second: guyidle-Sheet_0
   - first:
-      213: -7349882584872989000
-    second: guns_1
+      213: -3963706586178867629
+    second: guyidle-Sheet_1
   - first:
-      213: -3476979527478288156
-    second: guns_2
+      213: 2730773279702134348
+    second: guyidle-Sheet_2
   - first:
-      213: -9170448629031416532
-    second: guns_3
+      213: -6731898873119149559
+    second: guyidle-Sheet_3
+  - first:
+      213: 1220850831079158851
+    second: guyidle-Sheet_4
+  - first:
+      213: -4232010079083250180
+    second: guyidle-Sheet_5
+  - first:
+      213: 4056474690254878032
+    second: guyidle-Sheet_6
+  - first:
+      213: 3681915661391548118
+    second: guyidle-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,76 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guns_0
+      name: guyidle-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 35
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d97a0be93d6d2660800000000000000
-      internalID: 7362661061344524757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 2
-        width: 34
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bec0dbfab8fff990800000000000000
-      internalID: -7349882584872989000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_2
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 2
-        width: 63
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e0e955aa894fbfc0800000000000000
-      internalID: -3476979527478288156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_3
-      rect:
-        serializedVersion: 2
-        x: 204
+        x: 2
         y: 0
-        width: 43
-        height: 17
+        width: 29
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +153,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d4d9b1f850cb080800000000000000
-      internalID: -9170448629031416532
+      spriteID: 0f9ecfb389b4fd590800000000000000
+      internalID: -7647310525038269968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35eaee84cd51ef8c0800000000000000
+      internalID: -3963706586178867629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e26c264d7a5e520800000000000000
+      internalID: 2730773279702134348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 29
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90271eb54ad7392a0800000000000000
+      internalID: -6731898873119149559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344b63ecc5551f010800000000000000
+      internalID: 1220850831079158851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdbe565141e445c0800000000000000
+      internalID: -4232010079083250180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05531091d3e7b4830800000000000000
+      internalID: 4056474690254878032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyidle-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 0
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dec03259cac81330800000000000000
+      internalID: 3681915661391548118
       vertices: []
       indices: 
       edges: []
