@@ -2,10 +2,9 @@ using UnityEngine;
 
 namespace MidnightMetalMadness.Entity.Weapons
 {
-    public class Projectiles : MonoBehaviour
+    public class Projectiles : MonoBehaviour, IHealthChange
     {
-        // Change to private later once enemy projectiles are created
-        [HideInInspector] public int damage;
+        [SerializeField] private int damage;
 
         private Rigidbody2D projectile_rigidbody;
 
@@ -36,6 +35,11 @@ namespace MidnightMetalMadness.Entity.Weapons
         private void OnBecameInvisible()
         {
             gameObject.SetActive(false);
+        }
+
+        public int HealthChangeAmount()
+        {
+            return damage;
         }
     }
 }

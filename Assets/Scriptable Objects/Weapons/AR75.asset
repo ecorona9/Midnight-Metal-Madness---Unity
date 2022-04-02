@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon_type: 1
   damage: 75
-  weapon_sprite: {fileID: 7362661061344524757, guid: d70e3f0bb7d26fe418dd745e37c10edd, type: 3}
+  weapon_sprite: {fileID: 7362661061344524757, guid: 085642ece7efa6b48a32d93cedba30a8, type: 3}
   shoot_cooldown: 0.1
-  weapon_position: {x: 1.47, y: 0.73, z: 0}
-  muzzle_position: {x: 3.55, y: 0.78, z: 0}
+  weapon_position: {x: 0.199, y: 0.123, z: 0}
+  muzzle_position: {x: 0.402, y: 0.125, z: 0}
   ammo_count: 30
-  proj_speed: 35
+  proj_speed: 15

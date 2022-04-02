@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 085642ece7efa6b48a32d93cedba30a8
+guid: 3ea9c6ca3607244459cb46c560f77346
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7362661061344524757
-    second: guns_0
+      213: 4944359871939137860
+    second: guywalking_noshooting-Sheet_0
   - first:
-      213: -7349882584872989000
-    second: guns_1
+      213: -2372356884259964610
+    second: guywalking_noshooting-Sheet_1
   - first:
-      213: -3476979527478288156
-    second: guns_2
+      213: -7542191090105190411
+    second: guywalking_noshooting-Sheet_2
   - first:
-      213: -9170448629031416532
-    second: guns_3
+      213: 2965965412066014296
+    second: guywalking_noshooting-Sheet_3
+  - first:
+      213: -568048098704432700
+    second: guywalking_noshooting-Sheet_4
+  - first:
+      213: -4315756245043432967
+    second: guywalking_noshooting-Sheet_5
+  - first:
+      213: -2329194953968350721
+    second: guywalking_noshooting-Sheet_6
+  - first:
+      213: 6470162052436857181
+    second: guywalking_noshooting-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,76 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guns_0
+      name: guywalking_noshooting-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 35
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d97a0be93d6d2660800000000000000
-      internalID: 7362661061344524757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 2
-        width: 34
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bec0dbfab8fff990800000000000000
-      internalID: -7349882584872989000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_2
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 2
-        width: 63
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e0e955aa894fbfc0800000000000000
-      internalID: -3476979527478288156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_3
-      rect:
-        serializedVersion: 2
-        x: 204
+        x: 7
         y: 0
-        width: 43
-        height: 17
+        width: 32
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +153,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d4d9b1f850cb080800000000000000
-      internalID: -9170448629031416532
+      spriteID: 441d0a07b15ed9440800000000000000
+      internalID: 4944359871939137860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e397b39abf1b31fd0800000000000000
+      internalID: -2372356884259964610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7f92ee921c45790800000000000000
+      internalID: -7542191090105190411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8543a42f3d9392920800000000000000
+      internalID: 2965965412066014296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1e26d8343ed18f0800000000000000
+      internalID: -568048098704432700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1330d9f8a5b14c0800000000000000
+      internalID: -4315756245043432967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9851ca7890dafd0800000000000000
+      internalID: -2329194953968350721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guywalking_noshooting-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 0
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5116b63b12aac950800000000000000
+      internalID: 6470162052436857181
       vertices: []
       indices: 
       edges: []

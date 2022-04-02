@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3331388220805287279}
   m_Layer: 8
   m_Name: Enemy Projectile (1)
-  m_TagString: Projectiles
+  m_TagString: Health Changer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54db2b0b5a35907459c7d5fa60b165f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: -25

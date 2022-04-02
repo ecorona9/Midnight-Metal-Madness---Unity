@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 085642ece7efa6b48a32d93cedba30a8
+guid: 8901a2f6717241847abb13faf67a525c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7362661061344524757
-    second: guns_0
+      213: -5834273343075881299
+    second: silencer-shooting-Sheet_3
   - first:
-      213: -7349882584872989000
-    second: guns_1
+      213: 5400660676416590950
+    second: silencer-shooting-Sheet_3
   - first:
-      213: -3476979527478288156
-    second: guns_2
+      213: -4117042634613048116
+    second: silencer-shooting-Sheet_3
   - first:
-      213: -9170448629031416532
-    second: guns_3
+      213: -3193152320419490999
+    second: silencer-shooting-Sheet_3
+  - first:
+      213: 5441584477802834317
+    second: silencer-shooting-Sheet_3
+  - first:
+      213: -7933694553227585486
+    second: silencer-shooting-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,85 +133,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guns_0
+      name: silencer-shooting-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae6e674e4f780fa0800000000000000
+      internalID: -5834273343075881299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silencer-shooting-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 35
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d97a0be93d6d2660800000000000000
-      internalID: 7362661061344524757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 2
-        width: 34
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bec0dbfab8fff990800000000000000
-      internalID: -7349882584872989000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_2
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 2
-        width: 63
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e0e955aa894fbfc0800000000000000
-      internalID: -3476979527478288156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guns_3
-      rect:
-        serializedVersion: 2
-        x: 204
         y: 0
-        width: 43
-        height: 17
+        width: 41
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2d4d9b1f850cb080800000000000000
-      internalID: -9170448629031416532
+      spriteID: 6645b32754003fa40800000000000000
+      internalID: 5400660676416590950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silencer-shooting-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc30ce69835dd6c0800000000000000
+      internalID: -4117042634613048116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: silencer-shooting-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 41
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9439ea3f1e4afa3d0800000000000000
+      internalID: -3193152320419490999
       vertices: []
       indices: 
       edges: []
