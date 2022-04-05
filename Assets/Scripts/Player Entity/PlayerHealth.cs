@@ -4,15 +4,12 @@
  * 
  */
 using UnityEngine;
-using MidnightMetalMadness.UI;
-using MidnightMetalMadness.Entity.Weapons;
 
 namespace MidnightMetalMadness.Entity.Player
 {
     public class PlayerHealth : MonoBehaviour
     {
         [SerializeField] private PlayerStats player_stats;
-        [SerializeField] private GameObject damage_text;
         [SerializeField] private IntEventSO player_health_channel;
         [SerializeField] private VoidEventSO game_over_channel;
 
@@ -25,32 +22,28 @@ namespace MidnightMetalMadness.Entity.Player
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Projectiles"))
+            if (collision.gameObject.CompareTag("Health Changer"))
             {
-                int dmg = collision.gameObject.GetComponent<Projectiles>().damage;
-                TakeDamage(dmg);
+                int value = collision.gameObject.GetComponent<IHealthChange>().HealthChangeAmount();
+                ChangeHealth(value);
             }
         }
 
-        private void TakeDamage(int dmg)
+        private void ChangeHealth(int value)
         {
-            player_health_channel.RaiseEvent(dmg);
-            health -= dmg;
-            SpawnDamageText(dmg);
+            player_health_channel.RaiseEvent(value);
+            health += (value);
 
-            if (health <= 0f)
+            if (health <= 0)
             {
                 game_over_channel.RaiseEvent();
                 gameObject.SetActive(false);
             }
-        }
 
-        private void SpawnDamageText(int dmg_value)
-        {
-            Vector3 offset = new Vector3(0f, 1.5f, 0f);
-            GameObject text_popup = Instantiate(damage_text, transform.position + offset, transform.rotation);
-            string text = "-" + dmg_value.ToString();
-            text_popup.GetComponent<FloatingTextDisplay>().SetText(text, Color.red);
+            if (health > 100)
+            {
+                health = 100;
+            }
         }
     }
 }

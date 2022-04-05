@@ -32,9 +32,9 @@ namespace MidnightMetalMadness.UI
             hp_slider.fillAmount = current_health / maximum_health;
         }
 
-        public void DecreaseHealth(int dmg)
+        public void ChangeHealth(int dmg)
         {
-            current_health -= dmg;
+            current_health += dmg;
             hp_slider.fillAmount = current_health / maximum_health;
         }
     }

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Care Package
   - Currency
-  - Projectiles
+  - Health Changer
   layers:
   - Default
   - TransparentFX
@@ -16,7 +16,7 @@ TagManager:
   - UI
   - Player
   - Ground
-  - Projectiles
+  - Interactables
   - Triggers
   - Items
   - Background

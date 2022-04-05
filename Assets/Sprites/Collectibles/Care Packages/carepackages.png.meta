@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0781efd7165942d46b9e8054c0202881
+guid: 892b21810ad77dc409439b515db63f74
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -131,9 +131,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
-        width: 300
-        height: 300
+        y: 0
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: carepackages_1
       rect:
         serializedVersion: 2
-        x: 540
-        y: 10
-        width: 300
-        height: 300
+        x: 53
+        y: 0
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: carepackages_2
       rect:
         serializedVersion: 2
-        x: 1030
+        x: 102
         y: 0
-        width: 300
-        height: 300
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: carepackages_3
       rect:
         serializedVersion: 2
-        x: 1520
-        y: 10
-        width: 300
-        height: 300
+        x: 150
+        y: 0
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

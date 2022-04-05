@@ -4,14 +4,12 @@ namespace MidnightMetalMadness.Entity.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        private Rigidbody2D player_rigidbody;
-        private Animator player_animator;
-
         [Header("Player Stats")]
         [SerializeField] private PlayerStats player_stats;
 
         [Header("Player Sprite")]
         [SerializeField] private Transform player_sprite;
+        [SerializeField] private Animator player_animator;
 
         [Header("Ground Check")]
         [SerializeField] private Transform ground_check_point;
@@ -21,6 +19,8 @@ namespace MidnightMetalMadness.Entity.Player
         [SerializeField] private float slope_check_distance;
         [SerializeField] private float ground_check_radius;
         [SerializeField] private float max_slope_angle;
+
+        private Rigidbody2D player_rigidbody; 
 
         private Vector3 current_scale;
         private Vector2 slope_norm_perp;
@@ -40,7 +40,6 @@ namespace MidnightMetalMadness.Entity.Player
         private void Awake()
         {
             player_rigidbody = GetComponent<Rigidbody2D>();
-            player_animator = GetComponent<Animator>();
         }
 
         private void Start()
@@ -82,9 +81,15 @@ namespace MidnightMetalMadness.Entity.Player
                 MovePlayer();
             }
         }
+
         private void IsGrounded()
         {
             is_grounded = Physics2D.OverlapCircle(ground_check_point.position, ground_check_radius, ground_mask);
+
+            if (is_grounded)
+            {
+                player_animator.SetFloat("VelocityX", Mathf.Abs(player_rigidbody.velocity.x));
+            }
         }
 
         private void CanJump()
@@ -211,6 +216,11 @@ namespace MidnightMetalMadness.Entity.Player
         public bool IsFacingRight()
         {
             return is_facing_right;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(ground_check_point.position, ground_check_radius);
         }
     }
 }
