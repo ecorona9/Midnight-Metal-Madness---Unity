@@ -11,18 +11,15 @@ namespace MidnightMetalMadness
         [SerializeField] private SpriteEventSO sprite_change_channel;
         [SerializeField] private BoolEventSO pause_channel;
         [SerializeField] private VoidEventSO gameover_channel;
+        [SerializeField] private VoidEventSO coin_channel;
 
         public IntEvent OnCurrentAmmoChange;
-
         public IntEvent OnMaximumAmmoChange;
-
         public IntEvent OnPlayerHealthChange;
-
         public SpriteEvent OnWeaponSwap;
-
         public BoolEvent OnPauseKeyPressed;
-
         public UnityEvent OnPlayerDeath;
+        public UnityEvent OnCoinPickup;
 
         private void OnEnable()
         {
@@ -32,6 +29,7 @@ namespace MidnightMetalMadness
             sprite_change_channel.OnEventRaised += ChangeSpriteImage;
             pause_channel.OnEventRaised += ShowPauseMenu;
             gameover_channel.OnEventRaised += ShowGameOverMenu;
+            coin_channel.OnEventRaised += IncreaseCoinCount;
         }
 
         private void OnDisable()
@@ -42,6 +40,7 @@ namespace MidnightMetalMadness
             sprite_change_channel.OnEventRaised -= ChangeSpriteImage;
             pause_channel.OnEventRaised -= ShowPauseMenu;
             gameover_channel.OnEventRaised -= ShowGameOverMenu;
+            coin_channel.OnEventRaised -= IncreaseCoinCount;
         }
 
         private void ChangeCurrentAmmo(int value)
@@ -72,6 +71,11 @@ namespace MidnightMetalMadness
         private void ShowGameOverMenu()
         {
             OnPlayerDeath?.Invoke();
+        }
+
+        private void IncreaseCoinCount()
+        {
+            OnCoinPickup?.Invoke();
         }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d70e3f0bb7d26fe418dd745e37c10edd
+guid: 085642ece7efa6b48a32d93cedba30a8
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -131,9 +131,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 19
-        width: 351
-        height: 132
+        y: 2
+        width: 35
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,10 +151,10 @@ TextureImporter:
       name: guns_1
       rect:
         serializedVersion: 2
-        x: 619
-        y: 19
-        width: 342
-        height: 122
+        x: 62
+        y: 2
+        width: 34
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: guns_2
       rect:
         serializedVersion: 2
-        x: 1189
-        y: 19
-        width: 632
-        height: 132
+        x: 119
+        y: 2
+        width: 63
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: guns_3
       rect:
         serializedVersion: 2
-        x: 2039
+        x: 204
         y: 0
-        width: 431
-        height: 170
+        width: 43
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
