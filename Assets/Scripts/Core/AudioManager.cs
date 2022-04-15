@@ -6,8 +6,6 @@ using UnityEngine;
 
 namespace MidnightMetalMadness
 {
-    public enum SoundEffects { Shoot, Jump, Run, PlayerHurt, EnemyHurt }
-
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager instance { get; private set; }
@@ -16,17 +14,15 @@ namespace MidnightMetalMadness
 
         [SerializeField] private AudioSource sfx;
 
-        [SerializeField] private AudioClip shoot;
+        [SerializeField] private AudioClip pistol;
 
-        [SerializeField] private AudioClip jump;
+        [SerializeField] private AudioClip ar75;
 
-        [SerializeField] private AudioClip run;
+        [SerializeField] private AudioClip bullx;
 
-        [SerializeField] private AudioClip player_hurt;
+        [SerializeField] private AudioClip hawkshot;
 
-        [SerializeField] private AudioClip enemy_hurt;
-
-        // TODO: Add more audio clips
+        [SerializeField] private AudioClip zooka;
 
         private void Awake()
         {
@@ -43,28 +39,29 @@ namespace MidnightMetalMadness
             music.Play();
         }
 
-        public void PlaySFX(SoundEffects audio_clip)
+        public void PlayPistol()
         {
-            switch (audio_clip)
-            {
-                case SoundEffects.Shoot:
-                    sfx.PlayOneShot(shoot);
-                    break;
-                case SoundEffects.Jump:
-                    sfx.PlayOneShot(jump);
-                    break;
-                case SoundEffects.Run:
-                    sfx.PlayOneShot(run);
-                    break;
-                case SoundEffects.PlayerHurt:
-                    sfx.PlayOneShot(player_hurt);
-                    break;
-                case SoundEffects.EnemyHurt:
-                    sfx.PlayOneShot(enemy_hurt);
-                    break;
-                default:
-                    break;
-            }
+            sfx.PlayOneShot(pistol);
+        }
+
+        public void PlayAR75()
+        {
+            sfx.PlayOneShot(ar75);
+        }
+
+        public void PlayBullX()
+        {
+            sfx.PlayOneShot(bullx);
+        }
+
+        public void PlayHawkshot()
+        {
+            sfx.PlayOneShot(hawkshot);
+        }
+
+        public void PlayZooka()
+        {
+            sfx.PlayOneShot(zooka);
         }
     }
 }

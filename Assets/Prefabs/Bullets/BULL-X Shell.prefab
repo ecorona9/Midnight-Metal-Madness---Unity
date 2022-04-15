@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3624629500245990378}
   - component: {fileID: 3624629500245990376}
   - component: {fileID: 3624629500245990380}
-  - component: {fileID: 3624629500245990381}
+  - component: {fileID: -3333952426692809867}
   m_Layer: 8
   m_Name: BULL-X Shell
   m_TagString: Untagged
@@ -73,7 +73,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
---- !u!114 &3624629500245990381
+--- !u!114 &-3333952426692809867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,10 +82,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3624629500245990377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db2b0b5a35907459c7d5fa60b165f0, type: 3}
+  m_Script: {fileID: 11500000, guid: e330098e4401bd444be97d64aa091c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 200
+  speed: 15
 --- !u!1 &4338037338126411283
 GameObject:
   m_ObjectHideFlags: 0
