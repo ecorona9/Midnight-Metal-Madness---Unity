@@ -23,6 +23,8 @@ namespace MidnightMetalMadness
 
         [SerializeField] private AudioClip zooka;
 
+        [SerializeField] private AudioClip button;
+
         private void Awake()
         {
             instance = this;
@@ -71,6 +73,11 @@ namespace MidnightMetalMadness
         public void PauseLowHP()
         {
             sfx.Pause();
+        }
+
+        public void PlayButtonSFX()
+        {
+            sfx.PlayOneShot(button);
         }
     }
 }
