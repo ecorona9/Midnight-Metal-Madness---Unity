@@ -32,5 +32,16 @@ namespace MidnightMetalMadness
         }
 
         public int HealthChangeAmount() => damage;
+
+        private void OnCollisionEnter2D()
+        {
+            gameObject.SetActive(false);
+        }
+
+        // Destroy the bullet when it has left the camera's vision
+        private void OnBecameInvisible()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

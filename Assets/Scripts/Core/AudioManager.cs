@@ -1,7 +1,6 @@
 /*  File Description:
- *  AudioManager is a class that controls which audio clips are played
+ *  AudioManager is a class that controls which audio clips are played. Attached this to main camera
  */
-
 using UnityEngine;
 
 namespace MidnightMetalMadness
@@ -24,6 +23,8 @@ namespace MidnightMetalMadness
 
         [SerializeField] private AudioClip zooka;
 
+        [SerializeField] private AudioClip low_hp;
+
         private void Awake()
         {
             instance = this;
@@ -34,12 +35,12 @@ namespace MidnightMetalMadness
             music.Pause();
         }
 
-        public void ResumeMusic()
+        public void PlayMusic()
         {
             music.Play();
         }
 
-        public void PlayPistol()
+        public void PlayZarpPistol()
         {
             sfx.PlayOneShot(pistol);
         }
@@ -59,9 +60,19 @@ namespace MidnightMetalMadness
             sfx.PlayOneShot(hawkshot);
         }
 
-        public void PlayZooka()
+        public void PlayZ00ka()
         {
             sfx.PlayOneShot(zooka);
+        }
+
+        public void PlayLowHP()
+        {
+            sfx.Play();
+        }
+
+        public void PauseLowHP()
+        {
+            sfx.Pause();
         }
     }
 }

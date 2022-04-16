@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1588463556756047057}
   m_Layer: 8
   m_Name: Z00-KA Missile
-  m_TagString: Untagged
+  m_TagString: Health Changer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

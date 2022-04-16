@@ -19,7 +19,7 @@ namespace MidnightMetalMadness
 
         public void Fire(bool is_facing_right, Vector3 muzzle)
         {
-            AudioManager.instance.PlayZooka();
+            AudioManager.instance.PlayZ00ka();
             if (is_facing_right)
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.identity);

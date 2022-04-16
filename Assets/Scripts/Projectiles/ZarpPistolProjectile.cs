@@ -18,7 +18,7 @@ namespace MidnightMetalMadness
 
         public void Fire(bool is_facing_right, Vector3 muzzle)
         {
-            AudioManager.instance.PlayPistol();
+            AudioManager.instance.PlayZarpPistol();
             if (is_facing_right)
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.identity);
