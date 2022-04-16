@@ -1,8 +1,5 @@
-
 /* Summary:
- * 
  * This script has the contains functions for the Pause Canvas
- * 
  */
 using UnityEngine;
 
