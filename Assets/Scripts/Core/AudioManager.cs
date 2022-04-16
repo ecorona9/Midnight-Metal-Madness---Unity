@@ -23,8 +23,6 @@ namespace MidnightMetalMadness
 
         [SerializeField] private AudioClip zooka;
 
-        [SerializeField] private AudioClip low_hp;
-
         private void Awake()
         {
             instance = this;
