@@ -8,8 +8,7 @@ using UnityEngine.UI;
 namespace MidnightMetalMadness.UI
 {
     public class SettingsPageSelect : MonoBehaviour
-    {        
-        [SerializeField] private CanvasGroup keybinds_page;     
+    {         
         [SerializeField] private CanvasGroup quality_page;   
         [SerializeField] private CanvasGroup volume_page;                 
         [SerializeField] private CanvasGroup help_page;
@@ -20,22 +19,14 @@ namespace MidnightMetalMadness.UI
         // keybinds page is first option, so will be displayed by default
         public void OnSettingMenuEnabled()
         {
-            if (keybinds_page == null) return;
+            if (quality_page == null) return;
             
-            keybinds_page.alpha = 1f;
-            volume_page.alpha = quality_page.alpha = help_page.alpha = 0f;
-            current_page = keybinds_page;
-        }
+            quality_page.alpha = 1f;
+            volume_page.alpha = help_page.alpha = 0f;
+            current_page = quality_page;
 
-        public void EnableKeybindPage()
-        {
-            if (keybinds_page == null) return;
-
-            if (current_page != keybinds_page)
-            {
-                StartCoroutine(FadeOutCurrentPage());
-                StartCoroutine(FadeInSelectedPage(keybinds_page));
-            }
+            volume_page.gameObject.SetActive(false);
+            help_page.gameObject.SetActive(false);
         }
 
         public void EnableQualityPage()
@@ -82,6 +73,7 @@ namespace MidnightMetalMadness.UI
                 yield return null;
             }
             current_page.alpha = 0f;
+            current_page.gameObject.SetActive(false);
         }
 
         private IEnumerator FadeInSelectedPage(CanvasGroup page)
@@ -95,6 +87,7 @@ namespace MidnightMetalMadness.UI
                 yield return null;
             }
             current_page = page;
+            current_page.gameObject.SetActive(true);
         }
     }
 }

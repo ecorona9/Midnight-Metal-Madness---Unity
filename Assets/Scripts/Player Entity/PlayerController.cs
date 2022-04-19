@@ -1,3 +1,7 @@
+/* SUMMARY:
+ * PlayerController handles player input. Attach to player parent object
+ */
+using System;
 using UnityEngine;
 
 namespace MidnightMetalMadness.Entity.Player
@@ -36,6 +40,8 @@ namespace MidnightMetalMadness.Entity.Player
         private bool is_on_slope;
         private bool is_grounded;
         private bool can_walk_on_slope;
+
+        public bool IsFacingRight { get { return is_facing_right; } }
 
         private void Awake()
         {
@@ -211,11 +217,6 @@ namespace MidnightMetalMadness.Entity.Player
                 is_jumping = true;
                 player_rigidbody.AddForce(Vector2.up * player_stats.jump_force, ForceMode2D.Impulse);
             }
-        }
-
-        public bool IsFacingRight()
-        {
-            return is_facing_right;
         }
 
         private void OnDrawGizmos()

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MidnightMetalMadness
 {
-    public enum State { Start, Running, Paused, Death, Lost, Victory }
+    public enum State { Start, Running, Paused, Settings, Death, Lost, Victory }
 
     public class GameStateManager : MonoBehaviour
     {     
@@ -30,12 +30,18 @@ namespace MidnightMetalMadness
                         break;
                     }
                 case State.Running:
-                    break;
-
+                    {
+                        Time.timeScale = 1f;
+                        break;
+                    }
                 case State.Paused:
                     {
                         pause_channel.RaiseEvent(true);
                         Time.timeScale = 0f;
+                        break;
+                    }
+                case State.Settings:
+                    {
                         break;
                     }
                 case State.Death:
@@ -73,19 +79,22 @@ namespace MidnightMetalMadness
                 case State.Paused:
                     {
                         pause_channel.RaiseEvent(false);
-                        Time.timeScale = 1f;
+                        break;
+                    }
+                case State.Settings:
+                    {
                         break;
                     }
                 case State.Death:
-                    break;
+                    {
+                        break;
+                    }
                 case State.Lost:
                     {
-                        Time.timeScale = 1f;
                         break;
                     }
                 case State.Victory:
                     {
-                        Time.timeScale = 1f;
                         break;
                     }
                 default:
@@ -123,6 +132,8 @@ namespace MidnightMetalMadness
                         }
                         break;
                     }
+                case State.Settings:
+                    break;
                 case State.Death:
                     break;
                 case State.Lost:
@@ -137,6 +148,16 @@ namespace MidnightMetalMadness
         public void TransitionToLostState()
         {
             TransitionState(State.Death);
+        }
+
+        public void TransitionToSettingsState()
+        {
+            TransitionState(State.Settings);
+        }
+
+        public void TransitionToPauseState()
+        {
+            TransitionState(State.Paused);
         }
     }
 }

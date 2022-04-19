@@ -100,7 +100,7 @@ namespace MidnightMetalMadness.Entity.Player
             pooled_projectile.SetActive(true);
             var bullet = pooled_projectile.GetComponent<IProjectiles>();
 
-            bullet.Fire(player_controller.IsFacingRight(), muzzle.position);
+            bullet.Fire(player_controller.IsFacingRight, muzzle.position);
 
             if (current_weapon != default_weapon)
             {

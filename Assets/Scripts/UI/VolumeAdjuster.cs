@@ -10,44 +10,24 @@ namespace MidnightMetalMadness.UI
     public class VolumeAdjuster : MonoBehaviour
     {
         [SerializeField] private AudioMixer mixer;
-        [SerializeField] private Slider master;
-        [SerializeField] private Slider music;
-        [SerializeField] private Slider sfx;
-
-        private void Awake()
-        {
-            if (!PlayerPrefs.HasKey(VolumePreferences.masterVolume))
-            {
-                PlayerPrefs.SetFloat(VolumePreferences.masterVolume, 0.5f);
-            }
-
-            if (!PlayerPrefs.HasKey(VolumePreferences.musicVolume))
-            {
-                PlayerPrefs.SetFloat(VolumePreferences.musicVolume, 0.5f);
-            }
-
-            if (!PlayerPrefs.HasKey(VolumePreferences.sfxVolume))
-            {
-                PlayerPrefs.SetFloat(VolumePreferences.sfxVolume, 0.5f);
-            }
-        }
 
         private void Start()
         {
             SetVolume(VolumePreferences.masterVolume, 
-                      PlayerPrefs.GetFloat(VolumePreferences.masterVolume));
+                      PlayerPrefs.GetFloat(VolumePreferences.masterVolume, 0.5f));
 
             SetVolume(VolumePreferences.musicVolume,
-                      PlayerPrefs.GetFloat(VolumePreferences.musicVolume));
+                      PlayerPrefs.GetFloat(VolumePreferences.musicVolume, 0.5f));
 
             SetVolume(VolumePreferences.sfxVolume,
-                      PlayerPrefs.GetFloat(VolumePreferences.sfxVolume));
+                      PlayerPrefs.GetFloat(VolumePreferences.sfxVolume, 0.5f));
         }
 
         // Exposed Param in Audio Mixer must be equal to key
         private void SetVolume(string key, float value)
         {
             PlayerPrefs.SetFloat(key, value);
+            PlayerPrefs.Save();
             mixer.SetFloat(key, Mathf.Log10(value) * 20);
         }
 
