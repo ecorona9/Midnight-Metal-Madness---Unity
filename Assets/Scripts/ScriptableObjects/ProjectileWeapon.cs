@@ -12,17 +12,15 @@ namespace MidnightMetalMadness
         k_enemy_gun = 5,
     }
 
-    [CreateAssetMenu(menuName = "Weapon/Projectile Wepaon")]
+    [CreateAssetMenu(menuName = "Weapon/Projectile Weapon")]
     public class ProjectileWeapon : ScriptableObject
     {
         public PoolWeaponIndex weapon_type;
-        public Sprite weapon_sprite;
-        public int damage;       
-        public int ammo_count;
-        
+        public Sprite weapon_sprite;      
+           
         [Header("Fire Rate")]
         public float shoot_cooldown;
-        public float proj_speed;
+        public int ammo_count;
 
         [Header("The local position of the weapon object")]
         public Vector3 weapon_position;

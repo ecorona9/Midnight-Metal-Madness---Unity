@@ -1,10 +1,13 @@
+/* SUMMARY:
+ * HealingUnit heals the player on pickup. Attach this script to HealingUnit prefabs
+ */
 using UnityEngine;
 
 namespace MidnightMetalMadness.Entity.Interactables
 {
     public class HealingUnit : MonoBehaviour, IHealthChange
     {
-        [SerializeField] private int healing;
+        [SerializeField] private int amount;
 
         private bool has_collided = false;
 
@@ -27,9 +30,6 @@ namespace MidnightMetalMadness.Entity.Interactables
             }
         }
 
-        public int HealthChangeAmount()
-        {
-            return healing;
-        }
+        public int HealthChangeAmount() => amount;
     }
 }
