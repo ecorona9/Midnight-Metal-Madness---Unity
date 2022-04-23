@@ -3,7 +3,7 @@
  */
 using UnityEngine;
 
-namespace MidnightMetalMadness
+namespace MidnightMetalMadness.Entity.Weapons
 {
     public class HawkshotProjectile : MonoBehaviour, IHealthChange, IProjectiles
     {

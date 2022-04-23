@@ -32,6 +32,7 @@ namespace MidnightMetalMadness.Entity.Weapons
                 rb.velocity = new Vector2(-1 * speed, 0f);
             }
         }
+
         public int HealthChangeAmount() => damage;
 
         private void OnCollisionEnter2D()

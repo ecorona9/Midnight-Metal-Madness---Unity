@@ -3,7 +3,7 @@
  */
 using UnityEngine;
 
-namespace MidnightMetalMadness
+namespace MidnightMetalMadness.Entity.Weapons
 {
     public interface IProjectiles
     {

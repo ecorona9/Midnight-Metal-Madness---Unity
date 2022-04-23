@@ -3,34 +3,44 @@
  */
 using UnityEngine;
 
-namespace MidnightMetalMadness
+namespace MidnightMetalMadness.Entity.Weapons
 {
     public class BullXProjectile : MonoBehaviour, IHealthChange, IProjectiles
     {
         [SerializeField] private int damage;
-        [SerializeField] private float speed;
+        [SerializeField] private GameObject hitbox;
 
-        private Rigidbody2D rb;
+        private Animator animator;
+
         private void Awake()
         {
-            rb = GetComponent<Rigidbody2D>();
+            animator = GetComponent<Animator>();
         }
+
         public void Fire(bool is_facing_right, Vector3 muzzle)
         {
             AudioManager.instance.PlayBullX();
             if (is_facing_right)
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.identity);
-                rb.velocity = new Vector2(speed, 0f);
             } 
             else
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.Euler(0f, 180f, 0f));
-                rb.velocity = new Vector2(-1 * speed, 0f);
             }
+            animator?.SetTrigger("BullxFire");
+            hitbox?.SetActive(true);
         }
 
         public int HealthChangeAmount() => damage;
+
+        // Called by animation event
+        public void TurnOffHitbox()
+        {
+            if (hitbox != null) return;
+
+            if (hitbox.activeSelf) hitbox.SetActive(false);
+        }
 
         private void OnCollisionEnter2D()
         {
