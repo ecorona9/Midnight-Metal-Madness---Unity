@@ -7,6 +7,7 @@ TagManager:
   - Care Package
   - Currency
   - Health Changer
+  - Enemy
   layers:
   - Default
   - TransparentFX
