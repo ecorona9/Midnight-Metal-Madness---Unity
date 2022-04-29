@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MidnightMetalMadness
 {
-    public enum State { Start, Running, Paused, Settings, Death, Lost, Victory }
+    public enum State { Start, Running, Paused, Death, Lost, Victory }
 
     public class GameStateManager : MonoBehaviour
     {     
@@ -38,10 +38,6 @@ namespace MidnightMetalMadness
                     {
                         pause_channel.RaiseEvent(true);
                         Time.timeScale = 0f;
-                        break;
-                    }
-                case State.Settings:
-                    {
                         break;
                     }
                 case State.Death:
@@ -79,10 +75,6 @@ namespace MidnightMetalMadness
                 case State.Paused:
                     {
                         pause_channel.RaiseEvent(false);
-                        break;
-                    }
-                case State.Settings:
-                    {
                         break;
                     }
                 case State.Death:
@@ -132,8 +124,6 @@ namespace MidnightMetalMadness
                         }
                         break;
                     }
-                case State.Settings:
-                    break;
                 case State.Death:
                     break;
                 case State.Lost:
@@ -148,11 +138,6 @@ namespace MidnightMetalMadness
         public void TransitionToLostState()
         {
             TransitionState(State.Death);
-        }
-
-        public void TransitionToSettingsState()
-        {
-            TransitionState(State.Settings);
         }
 
         public void TransitionToPauseState()

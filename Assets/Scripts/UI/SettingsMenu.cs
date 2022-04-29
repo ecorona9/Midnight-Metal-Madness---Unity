@@ -20,5 +20,14 @@ namespace MidnightMetalMadness.UI
                 settings_menu.SetTrigger("HideSettingsMenu");
             }
         }
+
+        // Close settings menu if escaped key is pressed
+        public void HideMenuOnPauseKeyPressed(bool condition)
+        {
+            if (!condition)
+            {
+                settings_menu.SetTrigger("HideSettingsMenu");
+            }
+        }
     }
 }

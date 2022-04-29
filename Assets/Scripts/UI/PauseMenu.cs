@@ -2,6 +2,7 @@
  * This script has the contains functions for the Pause Canvas
  */
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace MidnightMetalMadness.UI
 {
@@ -19,6 +20,11 @@ namespace MidnightMetalMadness.UI
             {
                 pause_menu.SetTrigger("HidePauseMenu");
             }
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadSceneAsync("Game-Scene");
         }
     }
 }
