@@ -26,5 +26,10 @@ namespace MidnightMetalMadness.UI
         {
             SceneManager.LoadSceneAsync("Game-Scene");
         }
+
+        public void QuitToMainMenu()
+        {
+            SceneManager.LoadSceneAsync("Menu-Scene");
+        }
     }
 }
