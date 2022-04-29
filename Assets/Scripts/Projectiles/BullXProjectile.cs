@@ -8,14 +8,8 @@ namespace MidnightMetalMadness.Entity.Weapons
     public class BullXProjectile : MonoBehaviour, IHealthChange, IProjectiles
     {
         [SerializeField] private int damage;
-        [SerializeField] private GameObject hitbox;
 
-        private Animator animator;
-
-        private void Awake()
-        {
-            animator = GetComponent<Animator>();
-        }
+        [SerializeField] private Animator animator;
 
         public void Fire(bool is_facing_right, Vector3 muzzle)
         {
@@ -29,18 +23,9 @@ namespace MidnightMetalMadness.Entity.Weapons
                 transform.SetPositionAndRotation(muzzle, Quaternion.Euler(0f, 180f, 0f));
             }
             animator?.SetTrigger("BullxFire");
-            hitbox?.SetActive(true);
         }
 
         public int HealthChangeAmount() => damage;
-
-        // Called by animation event
-        public void TurnOffHitbox()
-        {
-            if (hitbox != null) return;
-
-            if (hitbox.activeSelf) hitbox.SetActive(false);
-        }
 
         private void OnCollisionEnter2D()
         {

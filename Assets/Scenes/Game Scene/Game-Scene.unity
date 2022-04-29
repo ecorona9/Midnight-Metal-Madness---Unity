@@ -19068,7 +19068,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8160
+    m_Bits: 16352
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -19170,7 +19170,7 @@ MonoBehaviour:
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 8167
+    m_Bits: 16352
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -19760,7 +19760,7 @@ MonoBehaviour:
     amount: 15
     projectile_list: []
   - projectile: {fileID: 3624629500245990377, guid: ec6ded294a271214e91fae8c012ead73, type: 3}
-    amount: 5
+    amount: 1
     projectile_list: []
   - projectile: {fileID: 3624629500245990377, guid: ac94da5963bb54e48809fbc8145ecec9, type: 3}
     amount: 5
@@ -22325,7 +22325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 317333514787856432, guid: 8f55c59992113e043b4ba79bebcb45d9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 317333514787856434, guid: 8f55c59992113e043b4ba79bebcb45d9, type: 3}
       propertyPath: m_RootOrder
@@ -22447,7 +22447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1546169872239090404, guid: 41833650cf765d144b73898cf5da0772, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1546169872239090406, guid: 41833650cf765d144b73898cf5da0772, type: 3}
       propertyPath: m_RootOrder

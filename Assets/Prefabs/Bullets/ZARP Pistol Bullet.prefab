@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3624629500245990376}
   - component: {fileID: 3624629500245990380}
   - component: {fileID: -7548359890655210887}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ZARP Pistol Bullet
   m_TagString: Health Changer
   m_Icon: {fileID: 0}
@@ -134,5 +134,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5419270422063d41b074b69c2216fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: -50
   speed: 10

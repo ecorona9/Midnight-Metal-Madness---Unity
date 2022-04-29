@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7429804646998555609}
   - component: {fileID: 5406554378494309317}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3624629500245990380}
   - component: {fileID: 3624629500245990381}
   - component: {fileID: 3287053019297168530}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: AR75 Bullet
   m_TagString: Health Changer
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54db2b0b5a35907459c7d5fa60b165f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 75
+  damage: -75
   speed: 15
 --- !u!58 &3287053019297168530
 CircleCollider2D:
