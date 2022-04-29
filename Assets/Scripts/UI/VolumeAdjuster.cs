@@ -13,14 +13,14 @@ namespace MidnightMetalMadness.UI
 
         private void Start()
         {
-            SetVolume(VolumePreferences.masterVolume, 
-                      PlayerPrefs.GetFloat(VolumePreferences.masterVolume, 0.5f));
+            SetVolume(SettingPreferences.masterVolume, 
+                      PlayerPrefs.GetFloat(SettingPreferences.masterVolume, 0.5f));
 
-            SetVolume(VolumePreferences.musicVolume,
-                      PlayerPrefs.GetFloat(VolumePreferences.musicVolume, 0.5f));
+            SetVolume(SettingPreferences.musicVolume,
+                      PlayerPrefs.GetFloat(SettingPreferences.musicVolume, 0.5f));
 
-            SetVolume(VolumePreferences.sfxVolume,
-                      PlayerPrefs.GetFloat(VolumePreferences.sfxVolume, 0.5f));
+            SetVolume(SettingPreferences.sfxVolume,
+                      PlayerPrefs.GetFloat(SettingPreferences.sfxVolume, 0.5f));
         }
 
         // Exposed Param in Audio Mixer must be equal to key
@@ -33,17 +33,17 @@ namespace MidnightMetalMadness.UI
 
         public void AdjustMasterVolume(float value)
         {
-            SetVolume(VolumePreferences.masterVolume, value);
+            SetVolume(SettingPreferences.masterVolume, value);
         }
 
         public void AdjustMusicVolume(float value)
         {
-            SetVolume(VolumePreferences.musicVolume, value);
+            SetVolume(SettingPreferences.musicVolume, value);
         }
 
         public void AdjustSFXVolume(float value) 
         { 
-            SetVolume(VolumePreferences.sfxVolume, value); 
+            SetVolume(SettingPreferences.sfxVolume, value); 
         }
     }
 }
