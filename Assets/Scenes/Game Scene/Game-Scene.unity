@@ -16612,7 +16612,7 @@ Animator:
   m_GameObject: {fileID: 986850489}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 830fb14382a685b429508cac96654bf4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21376,6 +21376,7 @@ MonoBehaviour:
   proj_weapon: {fileID: 986850490}
   muzzle: {fileID: 2141000806}
   default_weapon: {fileID: 11400000, guid: 1ed0898aa49f057438ee91d2c3724197, type: 2}
+  animator: {fileID: 986850491}
 --- !u!70 &2010100941
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

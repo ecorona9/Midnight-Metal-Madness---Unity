@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ZARP-PISTOL
   m_EditorClassIdentifier: 
   weapon_type: 0
-  damage: 50
   weapon_sprite: {fileID: -5834273343075881299, guid: 8901a2f6717241847abb13faf67a525c, type: 3}
   shoot_cooldown: 0.1
+  ammo_count: -1
   weapon_position: {x: 0.304, y: 0.169, z: 0}
   muzzle_position: {x: 0.396, y: 0.159, z: 0}
-  ammo_count: -1
-  proj_speed: 10
+  idle_string: ZARP-PISTOL Idle
+  fire_string: ZARP-PISTOL Fire

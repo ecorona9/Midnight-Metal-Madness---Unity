@@ -18,3 +18,5 @@ MonoBehaviour:
   ammo_count: 15
   weapon_position: {x: 0.199, y: 0.123, z: 0}
   muzzle_position: {x: 0.49, y: 0.125, z: 0}
+  idle_string: BULL-X Idle
+  fire_string: BULL-X Fire

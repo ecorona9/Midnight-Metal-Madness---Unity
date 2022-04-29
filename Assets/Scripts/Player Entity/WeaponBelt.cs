@@ -20,9 +20,10 @@ namespace MidnightMetalMadness.Entity.Player
         [Header("Default Weapon")]
         [SerializeField] private ProjectileWeapon default_weapon;
 
+        [SerializeField] private Animator animator;
+
         private PlayerController player_controller;
-        private SpriteRenderer proj_weapon_sprite;
-        private Animator proj_weapon_animator;      
+        private SpriteRenderer proj_weapon_sprite;  
         private ProjectileWeapon current_weapon;
         private int current_ammo_count;
         private float shoot_cooldown;
@@ -31,7 +32,6 @@ namespace MidnightMetalMadness.Entity.Player
         {
             player_controller = GetComponent<PlayerController>();
             proj_weapon_sprite = proj_weapon.GetComponent<SpriteRenderer>();
-            proj_weapon_animator = GetComponent<Animator>();
         }
 
         private void Start()
@@ -83,6 +83,8 @@ namespace MidnightMetalMadness.Entity.Player
             maximum_ammo_channel.RaiseEvent(obj.ammo_count);
             current_ammo_channel.RaiseEvent(obj.ammo_count);
             sprite_change_channel.RaiseEvent(current_weapon.weapon_sprite);
+
+            animator.SetTrigger(current_weapon.idle_string);
         }
 
         private bool IsDuplicateWeapon(ProjectileWeapon obj)
@@ -101,6 +103,8 @@ namespace MidnightMetalMadness.Entity.Player
             var bullet = pooled_projectile.GetComponent<IProjectiles>();
 
             bullet.Fire(player_controller.IsFacingRight, muzzle.position);
+
+            animator.SetTrigger(current_weapon.fire_string);
 
             if (current_weapon != default_weapon)
             {
