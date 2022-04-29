@@ -28,7 +28,6 @@ namespace MidnightMetalMadness.Entity.Player
             if (collision.gameObject.CompareTag("Health Changer"))
             {
                 int value = collision.gameObject.GetComponent<IHealthChange>().HealthChangeAmount();
-                Debug.Log(value);
                 ChangeHealth(value);
             }
         }

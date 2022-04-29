@@ -42,7 +42,6 @@ namespace MidnightMetalMadness
                     }
                 case State.Death:
                     {
-                        Debug.Log("You have Died");
                         TransitionState(State.Lost);
                         break;
                     }

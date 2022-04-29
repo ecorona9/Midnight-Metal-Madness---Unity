@@ -10,24 +10,31 @@ namespace MidnightMetalMadness.UI
 {
     public class GameOverMenu : MonoBehaviour
     {
-        private void Start()
+        private Animator animator;
+
+        private void Awake()
         {
-            gameObject.SetActive(false);
+            animator = GetComponent<Animator>();
         }
 
         public void ShowGameOverMenu()
         {
-            gameObject.SetActive(true);
+            animator.SetTrigger("Show Game Over");
+        }
+
+        public void HideGameOverMenu()
+        {
+            animator.SetTrigger("Hide Game Over");
         }
 
         public void Retry()
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadSceneAsync("Game-Scene");
         }
 
-        public void Quit()
+        public void QuitToMainMenu()
         {
-            Application.Quit();
+            SceneManager.LoadSceneAsync("Menu-Scene");
         }
     }
 }

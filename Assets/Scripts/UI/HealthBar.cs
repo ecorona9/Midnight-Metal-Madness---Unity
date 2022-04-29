@@ -1,10 +1,6 @@
-/*
- * Summary:
- * 
- * HealthBar updates the player's health in the UI
- * 
- * 
- */
+// Summary:
+// HealthBar updates the player's health in the UI
+//
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,9 +30,7 @@ namespace MidnightMetalMadness.UI
 
         public void ChangeHealth(int dmg)
         {
-            Debug.Log(current_health);
             current_health += dmg;
-            Debug.Log(current_health);
             hp_slider.fillAmount = current_health / maximum_health;
         }
     }
