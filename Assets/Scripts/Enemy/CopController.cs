@@ -59,6 +59,8 @@ namespace MidnightMetalMadness.Entity
         {
             if (this.id != id) return;
 
+            if (!gameObject.activeSelf) gameObject.SetActive(true);
+
             event_pos = player.position + new Vector3(distance, 0f, 0f);
             is_event_triggered = true;
 

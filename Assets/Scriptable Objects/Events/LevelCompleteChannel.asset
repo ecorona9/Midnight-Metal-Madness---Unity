@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f44257f9c61f684c8f2624fdbd3d02e, type: 3}
-  m_Name: Player-Stats
+  m_Script: {fileID: 11500000, guid: bd80692649f624843b66ea344c45608a, type: 3}
+  m_Name: LevelCompleteChannel
   m_EditorClassIdentifier: 
-  maximum_health: 200
-  horizontal_speed: 4
-  jump_force: 19

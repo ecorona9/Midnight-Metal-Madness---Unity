@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace MidnightMetalMadness.UI
 {
-
     public class ScoreDisplay : MonoBehaviour
     {
         [SerializeField] private EndStats final;
@@ -20,6 +19,7 @@ namespace MidnightMetalMadness.UI
         private void Start()
         {
             score = 0;
+            final.score = score;
             UpdateScoreDisplay();
         }
 

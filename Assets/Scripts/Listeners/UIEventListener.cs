@@ -13,6 +13,7 @@ namespace MidnightMetalMadness
         [SerializeField] private VoidEventSO gameover_channel;
         [SerializeField] private VoidEventSO coin_channel;
         [SerializeField] private VoidEventSO score_channel;
+        [SerializeField] private VoidEventSO level_complete_channel;
 
         public IntEvent OnCurrentAmmoChange;
         public IntEvent OnMaximumAmmoChange;
@@ -22,6 +23,7 @@ namespace MidnightMetalMadness
         public UnityEvent OnPlayerDeath;
         public UnityEvent OnCoinPickup;
         public UnityEvent OnEnemyKilled;
+        public UnityEvent OnWinningConditionMet;
 
         private void OnEnable()
         {
@@ -33,6 +35,7 @@ namespace MidnightMetalMadness
             gameover_channel.OnEventRaised += ShowGameOverMenu;
             coin_channel.OnEventRaised += IncreaseCoinCount;
             score_channel.OnEventRaised += IncreaseScore;
+            level_complete_channel.OnEventRaised += ShowLevelCompleteMenu;
         }
 
         private void OnDisable()
@@ -45,6 +48,7 @@ namespace MidnightMetalMadness
             gameover_channel.OnEventRaised -= ShowGameOverMenu;
             coin_channel.OnEventRaised -= IncreaseCoinCount;
             score_channel.OnEventRaised -= IncreaseScore;
+            level_complete_channel.OnEventRaised -= ShowLevelCompleteMenu;
         }
 
         private void ChangeCurrentAmmo(int value)
@@ -85,6 +89,11 @@ namespace MidnightMetalMadness
         private void IncreaseScore()
         {
             OnEnemyKilled?.Invoke();
+        }
+
+        private void ShowLevelCompleteMenu()
+        {
+            OnWinningConditionMet?.Invoke();
         }
     }
 }

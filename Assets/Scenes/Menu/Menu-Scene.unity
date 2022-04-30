@@ -475,6 +475,8 @@ MonoBehaviour:
   hawkshot: {fileID: 8300000, guid: 5ff823f546b52574a931e1d9b44290a6, type: 3}
   zooka: {fileID: 8300000, guid: 08d5810d653eb4ab0ba625cd6017606b, type: 3}
   button: {fileID: 8300000, guid: 792a6e132d38a4f70bbae7f091a6cab3, type: 3}
+  explode: {fileID: 0}
+  hurt: {fileID: 0}
 --- !u!1 &1348604546
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +965,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8240537844617600339, guid: d1f5a45ed0fbfb944b643964d44b7523, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1920
+      objectReference: {fileID: 0}
     - target: {fileID: 8240537844646039461, guid: d1f5a45ed0fbfb944b643964d44b7523, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1271,7 +1277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutorial
+  m_text: Level 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e96e6f328fe680b4bb08e94baca96045, type: 2}
   m_sharedMaterial: {fileID: -6656067945864598737, guid: e96e6f328fe680b4bb08e94baca96045, type: 2}

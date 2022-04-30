@@ -43,16 +43,19 @@ namespace MidnightMetalMadness.Entity
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (can_take_damage)
+            if (collision.gameObject.CompareTag("Health Changer"))
             {
-                can_take_damage = hitbox.enabled = false;
-                health += collision.gameObject.GetComponent<IHealthChange>().HealthChangeAmount();
-
-                if (health <= 0f)
+                if (can_take_damage)
                 {
-                    animator.SetTrigger("Explode2");
+                    can_take_damage = hitbox.enabled = false;
+                    health += collision.gameObject.GetComponent<IHealthChange>().HealthChangeAmount();
+
+                    if (health <= 0f)
+                    {
+                        animator.SetTrigger("Explode2");
+                    }
+                    StartCoroutine(BlinkEffect());
                 }
-                StartCoroutine(BlinkEffect());
             }
         }
 
@@ -68,7 +71,6 @@ namespace MidnightMetalMadness.Entity
                 iterations++;
             }
             can_take_damage = hitbox.enabled = true;
-            Debug.Log("end of invincibility");
         }
 
         public void PlayExplosion()
@@ -81,6 +83,16 @@ namespace MidnightMetalMadness.Entity
         public void DestroyObject()
         {
             Destroy(gameObject);
+        }
+
+        public void OnBecameInvisible()
+        {
+            gameObject.SetActive(false);
+        }
+
+        private void OnBecameVisible()
+        {
+            gameObject.SetActive(true);   
         }
     }
 }

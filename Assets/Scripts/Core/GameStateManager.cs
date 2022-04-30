@@ -143,5 +143,10 @@ namespace MidnightMetalMadness
         {
             TransitionState(State.Paused);
         }
+
+        public void TransitionToVictoryState()
+        {
+            TransitionState(State.Victory);
+        }
     }
 }
