@@ -1489,7 +1489,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Game-Scene
+          m_StringArgument: Tutorial-Level-Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!224 &5513226933977913311
