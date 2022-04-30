@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -541,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_Name
       value: Coin (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
@@ -1569,6 +1577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 5417185591384665176, guid: ca919693ae0e9424ab4aa43f666b0f69, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5417185591384665178, guid: ca919693ae0e9424ab4aa43f666b0f69, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -2169,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
 --- !u!1 &376279470
@@ -2488,6 +2504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cop
       objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -2592,6 +2612,10 @@ PrefabInstance:
     - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
       propertyPath: m_Name
       value: EventTrigger1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
@@ -2721,6 +2745,10 @@ PrefabInstance:
     - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_Name
       value: Coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
@@ -10332,6 +10360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Robot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5417185591384665176, guid: ca919693ae0e9424ab4aa43f666b0f69, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5417185591384665178, guid: ca919693ae0e9424ab4aa43f666b0f69, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -10403,6 +10435,10 @@ PrefabInstance:
     - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_Name
       value: Cop (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
@@ -10904,6 +10940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
 --- !u!1 &825708643
@@ -11034,6 +11074,10 @@ PrefabInstance:
     - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_Name
       value: Cop (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
@@ -11988,7 +12032,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6256600592109209997, guid: b947624a3a1b89c45aad2081001a3146, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e3c25ccd8fb1778428230938e75e2fd5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed6bda3330602c2499342beb76287cec, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13098,6 +13142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
 --- !u!1001 &1370234407
@@ -13154,6 +13202,10 @@ PrefabInstance:
     - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
       propertyPath: m_Name
       value: EventTrigger1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
@@ -13695,6 +13747,10 @@ PrefabInstance:
     - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_Name
       value: Coin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
@@ -14461,6 +14517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -14759,6 +14819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -14903,6 +14967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -14959,6 +15027,10 @@ PrefabInstance:
     - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_Name
       value: Coin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100399687510084433, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8100399687510084434, guid: e2462781f8ef5e341a3b9f5f5498c966, type: 3}
       propertyPath: m_RootOrder
@@ -15467,6 +15539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8205566277601748583, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673b0a3553f8ab949b06d825106a1abc, type: 3}
 --- !u!1 &1966892619
@@ -15878,6 +15954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cop (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -16206,6 +16286,10 @@ PrefabInstance:
     - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_Name
       value: Cop (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8219811669092383328, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8219811669092383331, guid: cb196268dff9f444882f0e5fe88e804c, type: 3}
       propertyPath: m_RootOrder
@@ -17124,8 +17208,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+      - m_Target: {fileID: 1156681789}
+        m_TargetAssemblyTypeName: MidnightMetalMadness.UI.GameOverMenu, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:

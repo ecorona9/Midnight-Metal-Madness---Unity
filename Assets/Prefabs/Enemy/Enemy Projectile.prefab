@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3331388220805287282}
   - component: {fileID: 3331388220805287276}
   - component: {fileID: 5796466871063764335}
-  - component: {fileID: 6308575797120133077}
+  - component: {fileID: 3932771490016671097}
   m_Layer: 15
   m_Name: Enemy Projectile
   m_TagString: Health Changer
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1966143023
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 982262590899231604, guid: 1afdd3fd10c470c4297a69bf36a08fd9, type: 3}
+  m_Sprite: {fileID: -1812698619174098983, guid: 1afdd3fd10c470c4297a69bf36a08fd9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: -25
   speed: 5
---- !u!58 &6308575797120133077
-CircleCollider2D:
+--- !u!70 &3932771490016671097
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,5 +134,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.34
+  m_Size: {x: 0.62, y: 0.14}
+  m_Direction: 1
