@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3624629500245990379}
   - component: {fileID: 3624629500245990380}
   - component: {fileID: -7548359890655210887}
-  - component: {fileID: 8863615962655730300}
+  - component: {fileID: 3561781044335027334}
   m_Layer: 13
   m_Name: ZARP Pistol Bullet
   m_TagString: Health Changer
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1966143023
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7102705430510447968, guid: c83d8928a2d476841a4c1b3bcc5dbfbb, type: 3}
+  m_Sprite: {fileID: 6195840109394425805, guid: 1afdd3fd10c470c4297a69bf36a08fd9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: -50
   speed: 10
---- !u!58 &8863615962655730300
-CircleCollider2D:
+--- !u!70 &3561781044335027334
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,5 +134,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.065
+  m_Size: {x: 0.34, y: 0.23}
+  m_Direction: 1

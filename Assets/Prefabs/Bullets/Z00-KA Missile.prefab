@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3624629500245990378}
   - component: {fileID: 3624629500245990379}
-  - component: {fileID: 3624629500245990376}
   - component: {fileID: 3624629500245990380}
   - component: {fileID: -1588463556756047057}
+  - component: {fileID: 9041739991352238982}
   m_Layer: 13
   m_Name: Z00-KA Missile
   m_TagString: Health Changer
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1966143023
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8618663976898325987, guid: c83d8928a2d476841a4c1b3bcc5dbfbb, type: 3}
+  m_Sprite: {fileID: 982262590899231604, guid: 1afdd3fd10c470c4297a69bf36a08fd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3624629500245990376
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624629500245990377}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.17
 --- !u!50 &3624629500245990380
 Rigidbody2D:
   serializedVersion: 4
@@ -136,3 +120,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: -500
   speed: 20
+--- !u!58 &9041739991352238982
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624629500245990377}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.34

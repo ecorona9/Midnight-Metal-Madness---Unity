@@ -14,20 +14,20 @@ namespace MidnightMetalMadness.Entity.Player
         private int health;
         private int max_health;
 
-        // Low health is below 25% of maxmium health
-        private bool is_low_health;
-
         private void Start()
         {
             health = max_health = player_stats.maximum_health;
-            is_low_health = false;
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Health Changer"))
             {
                 int value = collision.gameObject.GetComponent<IHealthChange>().HealthChangeAmount();
+                if (value < 0)
+                {
+                    AudioManager.instance.PlayHurt();
+                }
                 ChangeHealth(value);
             }
         }
@@ -45,16 +45,6 @@ namespace MidnightMetalMadness.Entity.Player
             {
                 game_over_channel.RaiseEvent();
                 gameObject.SetActive(false);
-            }
-            else if (health / (float)max_health <= 0.25f && !is_low_health)
-            {
-                AudioManager.instance.PlayLowHP();
-                is_low_health = true;
-            }
-            else if (health / (float)max_health > 0.25f && is_low_health)
-            {
-                AudioManager.instance.PauseLowHP();
-                is_low_health = false;
             }
             else if (health > max_health)
             {

@@ -25,6 +25,10 @@ namespace MidnightMetalMadness
 
         [SerializeField] private AudioClip button;
 
+        [SerializeField] private AudioClip explode;
+
+        [SerializeField] private AudioClip hurt;
+
         private void Awake()
         {
             instance = this;
@@ -65,19 +69,19 @@ namespace MidnightMetalMadness
             sfx.PlayOneShot(zooka);
         }
 
-        public void PlayLowHP()
-        {
-            sfx.Play();
-        }
-
-        public void PauseLowHP()
-        {
-            sfx.Pause();
-        }
-
         public void PlayButtonSFX()
         {
             sfx.PlayOneShot(button);
+        }
+
+        public void PlayExplosion()
+        {
+            sfx.PlayOneShot(explode);
+        }
+
+        public void PlayHurt()
+        {
+            sfx.PlayOneShot(hurt);
         }
     }
 }

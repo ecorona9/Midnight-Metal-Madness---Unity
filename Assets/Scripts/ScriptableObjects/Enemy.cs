@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+// SUMMARY:
+// Enemy class has a speed var and a health var
+//
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Enemy", menuName = "Enemy")]
-
-public class Enemy : ScriptableObject
+namespace MidnightMetalMadness
 {
-    public string enemyname;
-    
-    public int health;
-
+    [CreateAssetMenu(menuName = "Enemy")]
+    public class Enemy : ScriptableObject
+    {
+        public float speed;
+        public int health;
+    }
 }

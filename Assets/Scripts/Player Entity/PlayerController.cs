@@ -8,6 +8,8 @@ namespace MidnightMetalMadness.Entity.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private TransformEventSO player_spawn_channel;
+
         [Header("Player Stats")]
         [SerializeField] private PlayerStats player_stats;
 
@@ -52,6 +54,7 @@ namespace MidnightMetalMadness.Entity.Player
         {
             is_facing_right = true;
             current_scale = player_sprite.transform.localScale;
+            player_spawn_channel.RaiseEvent(transform);
         }
 
         private void Update()

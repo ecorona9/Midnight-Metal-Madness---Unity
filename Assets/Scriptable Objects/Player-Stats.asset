@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximum_health: 100
   horizontal_speed: 4
-  jump_force: 17
+  jump_force: 19
