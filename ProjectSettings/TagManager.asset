@@ -53,7 +53,7 @@ TagManager:
   - name: Middle Ground
     uniqueID: 2611271405
     locked: 0
-  - name: Player
+  - name: Entities
     uniqueID: 795765185
     locked: 0
   - name: Items

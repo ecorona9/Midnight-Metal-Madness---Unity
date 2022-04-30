@@ -34,7 +34,7 @@ namespace MidnightMetalMadness.Entity.Player
         private float downward_slope_angle_old;
         private float side_slope_angle;
 
-        private bool is_facing_right;
+        public bool is_facing_right;
         private bool can_jump;
         private bool is_jumping;
         private bool is_on_slope;

@@ -10,13 +10,6 @@ namespace MidnightMetalMadness.Entity.Weapons
         [SerializeField] private int damage;
         [SerializeField] private float speed;
 
-        private Rigidbody2D rb;
-
-        private void Awake()
-        {
-            rb = GetComponent<Rigidbody2D>();
-        }
-
         // Fire the bullet towards the right or left given the direction and speed
         public void Fire(bool is_facing_right, Vector3 muzzle)
         {
@@ -24,18 +17,21 @@ namespace MidnightMetalMadness.Entity.Weapons
             if (is_facing_right)
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.identity);
-                rb.velocity = new Vector2(speed, 0f);
             }
             else
             {
                 transform.SetPositionAndRotation(muzzle, Quaternion.Euler(0f, 180f, 0f));
-                rb.velocity = new Vector2(-1 * speed, 0f);
             }
+        }
+
+        private void Update()
+        {
+            transform.Translate(speed * Time.deltaTime, 0f, 0f);
         }
 
         public int HealthChangeAmount() => damage;
 
-        private void OnCollisionEnter2D()
+        private void OnTriggerEnter2D()
         {
             gameObject.SetActive(false);
         }
