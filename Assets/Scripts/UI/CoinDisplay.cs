@@ -4,19 +4,19 @@
 //
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace MidnightMetalMadness
 {
-    [RequireComponent(typeof(Text), typeof(Animator))]
     public class CoinDisplay : MonoBehaviour
     {
-        private Text text;
+        private TextMeshProUGUI text;
         private Animator animator;
         private int coin_count;
 
         private void Awake()
         {
-            text = GetComponent<Text>();
+            text = GetComponent<TextMeshProUGUI>();
             animator = GetComponent<Animator>();
         }
 
@@ -29,7 +29,7 @@ namespace MidnightMetalMadness
         {
             coin_count++;
             animator.SetTrigger("CoinIncrease");
-            text.text = "x " + coin_count.ToString();
+            text.text = "X " + coin_count.ToString();
         }
     }
 }
