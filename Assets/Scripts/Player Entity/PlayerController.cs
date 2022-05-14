@@ -113,8 +113,9 @@ namespace MidnightMetalMadness.Entity.Player
                 can_jump = true;
             }
         }
-
-        // Implementation from Bardent
+        
+        #region SLOPE WALK
+        // Slope Walking from Bardent https://youtu.be/QPiZSTEuZnw
         private void CheckSlope()
         {
             Vector2 origin = new Vector2(ground_check_point.position.x, ground_check_point.position.y);
@@ -203,7 +204,8 @@ namespace MidnightMetalMadness.Entity.Player
                 player_rigidbody.velocity = new Vector2(xraw * player_stats.horizontal_speed, player_rigidbody.velocity.y);
             }
         }
-
+        #endregion
+        
         private void FlipCharacter()
         {
             current_scale.x *= -1;
