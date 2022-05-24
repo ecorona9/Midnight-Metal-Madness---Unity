@@ -1,5 +1,8 @@
-# GAME462-TBH
-Unity Game for 462 - Title TBA
+# Midnight Metal Madness
+Unity Game for CPSC 462
+
+# Check it out our landing page!
+https://midnight-metal-madness.web.app/
 
 ## Developers
 - Brian Altamirano
