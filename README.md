@@ -1,7 +1,7 @@
 # Midnight Metal Madness
 Unity Game for CPSC 462
 
-# Check it out our landing page!
+# Check out our landing page!
 https://midnight-metal-madness.web.app/
 
 ## Developers
